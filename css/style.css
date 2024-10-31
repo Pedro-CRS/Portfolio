@@ -190,6 +190,87 @@ section:nth-of-type(even) .input-box * {
 
 /* / Home & About sections */
 
+
+/* Skills section */
+.skill-container {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 1.2rem;
+}
+
+.skill-box {
+	display: flex;
+	align-items: center;
+	border-radius: 8px;
+	padding: 10px;
+	color: var(--text-color);
+	font-size: 13px;
+	font-weight: bold;
+	width: 10rem;
+	height: 100%;
+	text-align: left;
+	cursor: default;
+}
+
+.skill-box img {
+	width: 2rem;
+	max-width: 100%;
+	height: 2rem;
+	max-height: 100%;
+}
+
+.skill-box label {
+	margin-left: 0.5rem;
+}
+
+/* / Skills section */
+
+/* Contact section */
+.contact-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.contact h4,
+.contact p {
+	color: var(--main-color);
+}
+
+.contact form {
+	margin: 0.7rem 0;
+}
+
+.input-box {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.input-box input,
+textarea {
+	width: 100%;
+	padding: 1rem;
+	font-size: 0.9rem;
+	color: var(--text-color);
+	background-color: inherit;
+	border-radius: 0.5rem;
+	margin: 0.4rem 0;
+}
+
+.contact form textarea {
+	resize: none;
+}
+
+.contacts-items-m {
+	margin: 0.5rem 0 1rem;
+}
+
+/* / Contact section */
+
 /* General classes */
 .bfr-container {
 	margin: 0 auto;
@@ -233,7 +314,8 @@ section:nth-of-type(odd) .iconBtn:hover {
 	/* box-shadow: 0 0 2rem var(--main-color); */
 }
 
-.aBtn {
+.aBtn,
+.btnSubmitEmail {
 	display: inline-block;
 	padding: 0.7rem 1.8rem;
 	background-color: var(--main-color);
@@ -249,12 +331,14 @@ section:nth-of-type(odd) .iconBtn:hover {
 	font-size: inherit;
 }
 
+section:nth-of-type(even) .btnSubmitEmail:hover,
 section:nth-of-type(even) .aBtn:hover {
 	box-shadow: inset 0 0 2rem var(--main-color);
 	background-color: var(--evenSectionBgColor);
 	color: var(--main-color);
 }
 
+section:nth-of-type(odd) .btnSubmitEmail:hover,
 section:nth-of-type(odd) .aBtn:hover {
 	box-shadow: inset 0 0 2rem var(--main-color);
 	background-color: var(--oddSectionBgColor);
@@ -267,6 +351,24 @@ section:nth-of-type(odd) .aBtn:hover {
 
 .ml-auto {
 	margin-left: auto;
+}
+
+.d-flex {
+	display: flex;
+}
+
+.text-end {
+	text-align: end;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.text-truncate {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 footer {
@@ -312,6 +414,15 @@ footer {
 	.home-content h1 {
 		font-size: 2.2rem;
 	}
+
+	.contact-container {
+		flex-direction: column;
+	}
+
+	.contact form,
+	.contact-div {
+		width: 100%;
+	}
 }
 
 @media (min-width: 360px) {}
@@ -339,6 +450,19 @@ footer {
 	.home-container {
 		flex-direction: row;
 		justify-content: center;
+	}
+
+	.contact-container {
+		flex-direction: row;
+		gap: 1.2rem;
+	}
+
+	.contact form {
+		width: 70%;
+	}
+
+	.contact-div {
+		width: 30%;
 	}
 }
 
