@@ -3,8 +3,10 @@ $(document).ready(function () {
 		switchThemeFunction(function () {
 			headersEvenets(function () {
 				homeSectionEvents(function () {
-					if (callback)
-						callback();
+					contactSectionEvents(function () {
+						if (callback)
+							callback();
+					});
 				});
 			});
 		});
@@ -109,6 +111,22 @@ $(document).ready(function () {
 		$(".btnResume").off("click");
 		$(".btnResume").on("click", function (ev) {
 			window.open("https://docs.google.com/document/d/14GqAn3WyQJ0ef5SSA-7ehPWOWRf0dZ5QWQePiKYDvSc/export?format=pdf");
+		});
+
+		if (callback)
+			callback();
+	}
+
+	function skilsSectionEvents(callback) {
+
+		if (callback)
+			callback();
+	}
+
+	function contactSectionEvents(callback) {
+		$("#sendEmailBtn").off("click");
+		$("#sendEmailBtn").on("click", function (ev) {
+			alert("Não funciona ainda, fiz só o estilo");
 		});
 
 		if (callback)
