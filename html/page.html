@@ -13,7 +13,7 @@
 	<link id="dark-theme" rel="stylesheet" href="../css/themes/dark.css" disabled>
 </head>
 
-<body class="light">
+<body id="mainContent" class="light">
 	<header>
 		<a class="logo">&lt;Pedro H./&gt;</a>
 
@@ -186,17 +186,19 @@
 			</div>
 
 			<div class="contact-container">
-				<form action="">
+				<form id="contact-form">
 					<div class="input-box">
-						<input type="text" placeholder="Full Name" id="fullNameInput">
+						<input type="text" placeholder="Nome completo" id="fullNameInput">
 					</div>
 
 					<div class="input-box">
-						<input type="email" placeholder="E-mail" id="emailInput">
+						<input type="email" class="itemToDivid" placeholder="E-mail" id="emailInput">
+						<input type="tel" class="itemToDivid" maxlength="15" placeholder="Telefone" id="phoneInput">
 					</div>
 
 					<div class="input-box">
-						<textarea cols="30" rows="8" placeholder="Message" id="messageInput"></textarea>
+						<textarea cols="30" rows="8" placeholder="Mensagem" id="messageInput"></textarea>
+						<input type="hidden" name="_subject" value="New submission from portfolio!" id="defaultMessage">
 					</div>
 
 					<div class="d-flex">
@@ -233,6 +235,7 @@
 	</footer>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<script src="../js/script.js"></script>
 </body>
 

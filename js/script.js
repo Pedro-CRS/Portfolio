@@ -1,9 +1,13 @@
 $(document).ready(function () {
+	$("#mainContent").addClass("load");
+
 	let initPage = (callback) => {
 		switchThemeFunction(function () {
 			headersEvenets(function () {
 				homeSectionEvents(function () {
 					contactSectionEvents(function () {
+						$("#mainContent").removeClass("load");
+
 						if (callback)
 							callback();
 					});
@@ -77,15 +81,7 @@ $(document).ready(function () {
 
 		$(".nav > a, .nav-responsive > a").off("click");
 		$(".nav > a, .nav-responsive > a").on("click", function (ev) {
-			ev.preventDefault();
-
-			var nav = $(this).parent();
-			nav.find("a").removeClass("active");
-			$(this).addClass("active");
-
-			document.querySelector(this.getAttribute("href")).scrollIntoView({
-				behavior: "smooth"
-			});
+			scrollToSection(ev);
 		});
 
 		if (callback)
@@ -124,13 +120,101 @@ $(document).ready(function () {
 	}
 
 	function contactSectionEvents(callback) {
+		$("#phoneInput").off("keyup");
+		$("#phoneInput").on("keyup", function (ev) {
+			if (!this.value) {
+				this.value = "";
+				return;
+			}
+
+			this.value = this.value.replace(/\D/g, '');
+			this.value = this.value.replace(/(\d{2})(\d)/, "($1) $2");
+			this.value = this.value.replace(/(\d)(\d{4})$/, "$1-$2");
+			return this.value;
+		});
+
 		$("#sendEmailBtn").off("click");
 		$("#sendEmailBtn").on("click", function (ev) {
-			alert("Não funciona ainda, fiz só o estilo");
+			validateForm();
 		});
 
 		if (callback)
 			callback();
+	}
+
+	function validateForm() {
+		var validate = true;
+		$("#contact-form :input").removeClass("is-invalid");
+
+		const name = $("#fullNameInput");
+		const email = $("#emailInput");
+		const phone = $("#phoneInput");
+		const message = $("#messageInput");
+
+		if (!name.val() || name.val() === "") {
+			validate = false;
+			name.addClass("is-invalid");
+		}
+
+		if (!email.val() || (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{1,})+$/.test(email.val()) == false)) {
+			validate = false;
+			email.addClass("is-invalid");
+		}
+
+		if (!message.val() || message.val() === "") {
+			validate = false;
+			message.addClass("is-invalid");
+		}
+
+		if (validate) {
+			$("#mainContent").addClass("load");
+
+			data = {
+				name: name.val(),
+				email: email.val(),
+				contact: phone.val(),
+				message: message.val(),
+				_subject: $("#defaultMessage").val()
+			};
+
+			formAction(data);
+		}
+	}
+
+	function formAction(data) {
+		$.ajax({
+			url: "https://formsubmit.co/ajax/82d6662d7ed5f73438a8cf3c69643ca7",
+			method: "POST",
+			dataType: "json",
+			data: data,
+			success: function (dataR) {
+				name.val("");
+				email.val("");
+				phone.val("");
+				message.val("");
+
+				$("#mainContent").removeClass("load");
+
+				Swal.fire({
+					position: "center",
+					icon: "success",
+					title: "Sucesso...",
+					text: "Eu recebi o seu email, te respondo assim que possivel!",
+					showConfirmButton: true,
+				});
+			},
+			error: function (xhr, status, error) {
+				$("#mainContent").removeClass("load");
+
+				Swal.fire({
+					position: "center",
+					icon: "error",
+					title: "Oops...",
+					text: "Alguma coisa deu errado ao enviar a mensagem, tente novamente!",
+					showConfirmButton: true,
+				});
+			},
+		});
 	}
 
 	initPage();
