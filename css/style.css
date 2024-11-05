@@ -195,6 +195,47 @@ section:nth-of-type(even) .input-box * {
 
 /* / Home & About sections */
 
+/* Services section */
+.services-container {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+	gap: 1rem;
+}
+
+.services-box {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 1.5rem 1rem;
+	border-radius: 1.3rem;
+	text-align: center;
+	background-color: inherit;
+	transition: 0.5s ease;
+}
+
+.services-box:hover {
+	border-color: var(--main-color) !important;
+	transform: scale(1.03);
+}
+
+.services-box i {
+	font-size: 4.3rem;
+	color: var(--main-color);
+}
+
+.services-box h3 {
+	font-size: 1.5rem;
+}
+
+.services-box p {
+	margin: 0.5rem;
+	letter-spacing: 0.1rem;
+	text-align: justify;
+}
+
+/* / Services section */
 
 /* Skills section */
 .skill-container {
@@ -447,6 +488,16 @@ footer {
 		font-size: 2.2rem;
 	}
 
+	.services-container {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.services-box {
+		flex-grow: 1;
+		width: 100%;
+	}
+
 	.contact-container {
 		flex-direction: column;
 	}
@@ -460,7 +511,16 @@ footer {
 
 @media (min-width: 360px) {}
 
-@media (min-width: 576px) {}
+@media (min-width: 576px) {
+	.services-container {
+		flex-direction: row;
+		align-items: stretch;
+	}
+
+	.services-box {
+		width: 48%;
+	}
+}
 
 @media (min-width: 768px) {
 	.menu-hamburguer {
@@ -504,6 +564,16 @@ footer {
 @media (min-width: 992px) {
 	.input-box .itemToDivid {
 		width: 49%;
+	}
+}
+
+@media (min-width: 1024px) {
+	.services-container {
+		flex-direction: row;
+	}
+
+	.services-box {
+		width: 32%;
 	}
 }
 
