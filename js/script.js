@@ -2,14 +2,16 @@ $(document).ready(function () {
 	$("#mainContent").addClass("load");
 
 	let initPage = (callback) => {
-		switchThemeFunction(function () {
-			headersEvenets(function () {
-				homeSectionEvents(function () {
-					contactSectionEvents(function () {
-						$("#mainContent").removeClass("load");
+		setLanguage(function() {
+			switchThemeFunction(function () {
+				headersEvenets(function () {
+					homeSectionEvents(function () {
+						contactSectionEvents(function () {
+							$("#mainContent").removeClass("load");
 
-						if (callback)
-							callback();
+							if (callback)
+								callback();
+						});
 					});
 				});
 			});
@@ -215,6 +217,34 @@ $(document).ready(function () {
 				});
 			},
 		});
+	}
+
+	function setLanguage(callback) {
+		const brLang = $("#language-switcher > .br-lang");
+		const usaLang = $("#language-switcher > .usa-lang");
+
+		brLang.off("click");
+		brLang.on("click", function (ev) {
+			const _this = $(this);
+
+			if (!_this.hasClass("hidden")) {
+				_this.addClass("hidden");
+				usaLang.removeClass("hidden");
+			}
+		});
+
+		usaLang.off("click");
+		usaLang.on("click", function (ev) {
+			const _this = $(this);
+
+			if (!_this.hasClass("hidden")) {
+				_this.addClass("hidden");
+				brLang.removeClass("hidden");
+			}
+		});
+
+		if (callback)
+			callback();
 	}
 
 	initPage();
