@@ -271,14 +271,14 @@ $(document).ready(function () {
 
 		// Serviços Section
 		$(".services h2 span").text(translations.services.title);
-		$(".services-box.webInfo h3").text(translations.services.web.title);
-		$(".services-box.webInfo p").text(translations.services.web.description);
+		$(".services-card.webInfo h3").text(translations.services.web.title);
+		$(".services-card.webInfo p").text(translations.services.web.description);
 
-		$(".services-box.backendInfo h3").text(translations.services.backend.title);
-		$(".services-box.backendInfo p").text(translations.services.backend.description);
+		$(".services-card.backendInfo h3").text(translations.services.backend.title);
+		$(".services-card.backendInfo p").text(translations.services.backend.description);
 
-		$(".services-box.mobileInfo h3").text(translations.services.mobile.title);
-		$(".services-box.mobileInfo p").text(translations.services.mobile.description);
+		$(".services-card.mobileInfo h3").text(translations.services.mobile.title);
+		$(".services-card.mobileInfo p").text(translations.services.mobile.description);
 
 		// Projetos Section
 		$(".projects h2 span").text(translations.projects.title);
