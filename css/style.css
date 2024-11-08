@@ -45,7 +45,7 @@ header {
 }
 
 .logo {
-	font-size: 1.7rem;
+	font-size: 1.6rem;
 	color: var(--text-color);
 	font-weight: 600;
 	cursor: default;
@@ -88,7 +88,7 @@ header {
 .menu-hamburguer {
 	display: none;
 	cursor: pointer;
-	margin: 0 0.5rem 0 0;
+	margin: 0 0.7rem 0 0;
 }
 
 .bar1,
@@ -129,7 +129,7 @@ header {
 	height: 1.5rem;
 	background-color: transparent;
 	border-radius: 9999px;
-	margin-left: 0.5rem;
+	margin-left: 1rem;
 	cursor: pointer;
 }
 
@@ -216,36 +216,35 @@ section:nth-of-type(even) .input-box * {
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	gap: 1rem;
 }
 
-.services-box {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+.services-card {
 	padding: 1.5rem 1rem;
 	border-radius: 1.3rem;
 	text-align: center;
 	background-color: inherit;
 	transition: 0.5s ease;
+	max-width: 450px;
+	flex-grow: 1;
 }
 
-.services-box:hover {
+.services-card:hover {
 	border-color: var(--main-color) !important;
 	transform: scale(1.03);
 }
 
-.services-box i {
+.services-card i {
 	font-size: 4.3rem;
 	color: var(--main-color);
 }
 
-.services-box h3 {
+.services-card h3 {
 	font-size: 1.5rem;
 }
 
-.services-box p {
+.services-card p {
 	margin: 0.5rem;
 	letter-spacing: 0.1rem;
 	text-align: justify;
@@ -258,7 +257,7 @@ section:nth-of-type(even) .input-box * {
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
-	justify-content: start;
+	justify-content: center;
 	gap: 1.5rem;
 }
 
@@ -363,7 +362,7 @@ section:nth-of-type(even) .input-box * {
 .input-box input,
 textarea {
 	width: 100%;
-	padding: 1rem;
+	padding: 0.75rem;
 	font-size: 0.9rem;
 	color: var(--text-color);
 	background-color: inherit;
@@ -595,8 +594,7 @@ footer {
 		align-items: center;
 	}
 
-	.services-box {
-		flex-grow: 1;
+	.services-card {
 		width: 100%;
 	}
 
@@ -627,7 +625,7 @@ footer {
 		flex-direction: row;
 	}
 
-	.services-box {
+	.services-card {
 		width: 48%;
 	}
 
@@ -683,7 +681,7 @@ footer {
 		flex-direction: row;
 	}
 
-	.services-box {
+	.services-card {
 		width: 32%;
 	}
 
