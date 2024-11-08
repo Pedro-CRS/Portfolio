@@ -7,30 +7,31 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Portfolio | Pedro Henrique</title>
 
+	<link rel="stylesheet" href="https://unpkg.com/tippy.js@6/themes/light.css" />
 	<link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
 	<link rel="stylesheet" href="../css/style.css">
 	<link id="light-theme" rel="stylesheet" href="../css/themes/light.css">
 	<link id="dark-theme" rel="stylesheet" href="../css/themes/dark.css" disabled>
 </head>
 
-<body id="mainContent" class="light">
+<body id="mainContent">
 	<header>
 		<a class="logo">&lt;Pedro H./&gt;</a>
 
 		<div class="nav ml-auto">
-			<a href="#home">Início</a>
-			<a href="#services">Serviços</a>
-			<a href="#projects">Projetos</a>
-			<a href="#skills">Habilidades</a>
-			<a href="#contact">Contato</a>
+			<a href="#home"></a>
+			<a href="#services"></a>
+			<a href="#projects"></a>
+			<a href="#skills"></a>
+			<a href="#contact"></a>
 		</div>
 
 		<div class="nav-responsive">
-			<a href="#home">Início</a>
-			<a href="#services">Serviços</a>
-			<a href="#projects">Projetos</a>
-			<a href="#skills">Habilidades</a>
-			<a href="#contact">Contato</a>
+			<a href="#home"></a>
+			<a href="#services"></a>
+			<a href="#projects"></a>
+			<a href="#skills"></a>
+			<a href="#contact"></a>
 		</div>
 
 		<div class="menu-hamburguer ml-auto">
@@ -39,13 +40,13 @@
 			<div class="bar3"></div>
 		</div>
 
-		<button type="button" id="theme-switcher" class="btn-theme" title="trocar tema">
+		<button type="button" id="theme-switcher" class="btn-theme">
 			<i class=""></i>
 		</button>
 
 		<button type="button" id="language-switcher" class="btn-language">
-			<img src="../img/flag_Brazil.svg" alt="Bandeira do Brasil" class="language-icon br-lang">
-			<img src="../img/flag_USA.svg" alt="Bandeira dos EUA" class="hidden language-icon usa-lang">
+			<img src="../img/flag_Brazil.svg" alt="Bandeira do Brasil" class="hidden language-icon br-lang">
+			<img src="../img/flag_USA.svg" alt="Bandeira dos E.U.A." class="language-icon usa-lang">
 		</button>
 	</header>
 
@@ -54,19 +55,14 @@
 		<div class="bfr-container">
 			<div class="home-container">
 				<div class="home-content">
-					<h3>Olá, meu nome é</h3>
+					<h3></h3>
 					<h1>Pedro Henrique</h1>
-					<h3>Desenvolvedor de <span>Software</span></h3>
+					<h3 class="bio"><span></span></h3>
 
-					<p>Formado em Análise e Desenvolvimento de Sistemas.</p>
-					<p>Em 2022, na reta final da graduação, comecei a atuar como desenvolvedor para a área de Web,
-						ocupando
-						na
-						maior parte do tempo a posição como FrontEnd.</p>
-					<p>Tenho grande interesse em desenvolvimento BackEnd para poder atuar como desenvolvedor FullStack,
-						também
-						tenho interesse em desenvolvimento Mobile.</p>
-					<p>Busco oportunidade para trabalhar na área e estou disponível para freelance.</p>
+					<p></p>
+					<p></p>
+					<p></p>
+					<p></p>
 
 					<div class="social-media">
 						<button type="button" class="iconBtn btnGitHub"><i class="bx bxl-github"></i></button>
@@ -75,12 +71,12 @@
 					</div>
 
 					<div>
-						<a class="aBtn btnResume no-margin">Download Cúrriculo</a>
+						<a class="aBtn btnResume no-margin"></a>
 					</div>
 				</div>
 
 				<div class="home-img">
-					<img src="../img/digitzed-classic-paintings.jpeg" alt="Profile picture">
+					<img src="../img/digitzed-classic-paintings.jpeg" alt="Foto de perfil">
 				</div>
 			</div>
 		</div>
@@ -88,203 +84,60 @@
 
 	<!-- Services section -->
 	<section class="services" id="services">
-		<h2><span>Serviços</span></h2>
+		<h2><span></span></h2>
 
 		<div class="bfr-container">
 			<div class="services-container">
-				<div class="services-box box-border">
+				<div class="services-box box-border webInfo">
 					<i class="bx bx-code-alt"></i>
-					<h3 class="text-truncate">Desenvolvimento Web</h3>
+					<h3 class="text-truncate"></h3>
 
 					<p>
-						O desenvolvimento de aplicativos da Web descreve o processo de projetar, construir, testar e
-						implementar aplicativos baseados na Web que serão instalados em servidores remotos e entregues a
-						usuários ou clientes pela Internet. Depois que um aplicativo da Web for implementado em um
-						servidor
-						de aplicativos, os usuários podem acessar o aplicativo e suas funções e serviços usando qualquer
-						navegador da Web (Google Chrome, Mozilla Firefox, Microsoft Edge, etc.).
 					</p>
-
-					<!-- <a class="aBtn" id="btnWebDev">Read More</a> -->
 				</div>
 
-				<div class="services-box box-border">
+				<div class="services-box box-border backendInfo">
 					<i class="bx bx-code-curly"></i>
-					<h3 class="text-truncate">Desenvolvimento BackEnd</h3>
+					<h3 class="text-truncate"></h3>
 
 					<p>
-						O desenvolvimento de backend se refere ao aspecto do lado do servidor do desenvolvimento da web,
-						com
-						foco na criação e no gerenciamento da lógica do servidor, bancos de dados e APIs. Ele envolve o
-						tratamento da autenticação do usuário, autorização e processamento de solicitações do usuário,
-						normalmente usando linguagens de desenvolvimento de backend, como Python, Java, Ruby, PHP,
-						JavaScript (Node.js) e .NET.
 					</p>
-
-					<!-- <a class="aBtn" id="btnBackDev">Read More</a> -->
 				</div>
 
-				<div class="services-box box-border">
+				<div class="services-box box-border mobileInfo">
 					<i class="bx bx-mobile-alt"></i>
-					<h3 class="text-truncate">Desenvolvimento Mobile</h3>
+					<h3 class="text-truncate"></h3>
 
 					<p>
-						O desenvolvimento de aplicativos móveis é o processo de criação de aplicativos de software que
-						rodam
-						em um dispositivo móvel, e um aplicativo móvel típico utiliza uma conexão de rede para trabalhar
-						com
-						recursos de computação remotos. Portanto, o processo de desenvolvimento móvel envolve a criação
-						de
-						pacotes de software instaláveis, a implementação de serviços de
-						backend, como acesso a dados com uma API, e o teste do aplicativo em dispositivos de destino.
 					</p>
-
-					<!-- <a class="aBtn" id="btnMobDev">Read More</a> -->
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<!-- Projetos section -->
+	<!-- Projects section -->
 	<section class="projects" id="projects">
-		<h2><span>Projetos</span></h2>
+		<h2><span></span></h2>
 
 		<div class="bfr-container">
 			<div class="projects-container">
-				<div class="project-card elevation-4">
+				<div class="project-card elevation-4 proj1">
 					<div class="project-card-image">
-						<img src="../img/UaiFuel_entry.png" alt="Imagem de tecnologia" />
+						<img src="../img/projectsImgs/UaiFuel_entry.png" alt="Imagem do projeto">
 					</div>
 
 					<div class="project-card-content">
-						<h3>UaiFuel</h3>
-						<span class="text-bold">projeto desenvolvido em grupo</span>
+						<h3></h3>
+						<span class="text-bold"></span>
 						<p>
-							UaiFuel é um gerenciador de abastecimentos para postos de combustível franqueados.
-							Sistema para que as empresas do ramo de transporte possam acompanhar/controlar o histórico
-							abastecimento dos veículos de sua frota. O sistema integra os motoristas, veiculos e postos
-							de combustiveis parceiros da empresa, para evitar fraudes e/ou desperdícios durante os
-							abastecimentos da frota.
 						</p>
 
 						<div class="projectcs-btn-div">
-							<button type="button" class="iconBtn no-my" id="btnRep1" title="implementação do projeto">
+							<button type="button" class="iconBtn no-my" id="btnDep1">
 								<i class="bx bx-globe"></i>
 							</button>
 
-							<button type="button" class="iconBtn no-my" id="btnDep1" title="Repositório no GitHub">
-								<i class="bx bxl-github"></i>
-							</button>
-						</div>
-					</div>
-				</div>
-
-				<div class="project-card elevation-4">
-					<div class="project-card-image">
-						<img src="../img/UaiFuel_entry.png" alt="Imagem de tecnologia" />
-					</div>
-
-					<div class="project-card-content">
-						<h3>UaiFuel</h3>
-						<span class="text-bold">&nbsp</span>
-						<p>
-							UaiFuel é um gerenciador de abastecimentos para postos de combustível franqueados.
-							Sistema para que as empresas do ramo de transporte possam acompanhar/controlar o histórico
-							abastecimento dos veículos de sua frota. O sistema integra os motoristas, veiculos e postos
-							de combustiveis parceiros da empresa, para evitar fraudes e/ou desperdícios durante os
-							abastecimentos da frota.
-						</p>
-
-						<div class="projectcs-btn-div">
-							<button type="button" class="iconBtn no-my" id="btnRep1" title="implementação do projeto">
-								<i class="bx bx-globe"></i>
-							</button>
-
-							<button type="button" class="iconBtn no-my" id="btnDep1" title="Repositório no GitHub">
-								<i class="bx bxl-github"></i>
-							</button>
-						</div>
-					</div>
-				</div>
-
-				<div class="project-card elevation-4">
-					<div class="project-card-image">
-						<img src="../img/UaiFuel_entry.png" alt="Imagem de tecnologia" />
-					</div>
-
-					<div class="project-card-content">
-						<h3>UaiFuel</h3>
-						<span class="text-bold">projeto desenvolvido em grupo</span>
-						<p>
-							UaiFuel é um gerenciador de abastecimentos para postos de combustível franqueados.
-							Sistema para que as empresas do ramo de transporte possam acompanhar/controlar o histórico
-							abastecimento dos veículos de sua frota. O sistema integra os motoristas, veiculos e postos
-							de combustiveis parceiros da empresa, para evitar fraudes e/ou desperdícios durante os
-							abastecimentos da frota.
-						</p>
-
-						<div class="projectcs-btn-div">
-							<button type="button" class="iconBtn no-my" id="btnRep1" title="implementação do projeto">
-								<i class="bx bx-globe"></i>
-							</button>
-
-							<button type="button" class="iconBtn no-my" id="btnDep1" title="Repositório no GitHub">
-								<i class="bx bxl-github"></i>
-							</button>
-						</div>
-					</div>
-				</div>
-
-				<div class="project-card elevation-4">
-					<div class="project-card-image">
-						<img src="../img/UaiFuel_entry.png" alt="Imagem de tecnologia" />
-					</div>
-
-					<div class="project-card-content">
-						<h3>UaiFuel</h3>
-						<span class="text-bold">&nbsp</span>
-						<p>
-							UaiFuel é um gerenciador de abastecimentos para postos de combustível franqueados.
-							Sistema para que as empresas do ramo de transporte possam acompanhar/controlar o histórico
-							abastecimento dos veículos de sua frota. O sistema integra os motoristas, veiculos e postos
-							de combustiveis parceiros da empresa, para evitar fraudes e/ou desperdícios durante os
-							abastecimentos da frota.
-						</p>
-
-						<div class="projectcs-btn-div">
-							<button type="button" class="iconBtn no-my" id="btnRep1" title="implementação do projeto">
-								<i class="bx bx-globe"></i>
-							</button>
-
-							<button type="button" class="iconBtn no-my" id="btnDep1" title="Repositório no GitHub">
-								<i class="bx bxl-github"></i>
-							</button>
-						</div>
-					</div>
-				</div>
-
-				<div class="project-card elevation-4">
-					<div class="project-card-image">
-						<img src="../img/UaiFuel_entry.png" alt="Imagem de tecnologia" />
-					</div>
-
-					<div class="project-card-content">
-						<h3>UaiFuel</h3>
-						<span class="text-bold">projeto desenvolvido em grupo</span>
-						<p>
-							UaiFuel é um gerenciador de abastecimentos para postos de combustível franqueados.
-							Sistema para que as empresas do ramo de transporte possam acompanhar/controlar o histórico
-							abastecimento dos veículos de sua frota. O sistema integra os motoristas, veiculos e postos
-							de combustiveis parceiros da empresa, para evitar fraudes e/ou desperdícios durante os
-							abastecimentos da frota.
-						</p>
-
-						<div class="projectcs-btn-div">
-							<button type="button" class="iconBtn no-my" id="btnRep1" title="implementação do projeto">
-								<i class="bx bx-globe"></i>
-							</button>
-
-							<button type="button" class="iconBtn no-my" id="btnDep1" title="Repositório no GitHub">
+							<button type="button" class="iconBtn no-my" id="btnRep1">
 								<i class="bx bxl-github"></i>
 							</button>
 						</div>
@@ -296,88 +149,87 @@
 
 	<!-- Skills section -->
 	<section class="skills" id="skills">
-		<h2><span>Habilidades</span></h2>
+		<h2><span></span></h2>
 
 		<div class="bfr-container">
 			<div class="skill-container">
 				<div class="skill-box box-border">
-					<img src="https://cdn.worldvectorlogo.com/logos/html-1.svg" alt="HTML icon">
+					<img src="../img/skillsImgs/html-1.svg" alt="HTML logo">
 					<label>HTML</label>
 				</div>
 
 				<div class="skill-box box-border">
-					<img src="https://cdn.worldvectorlogo.com/logos/css-3.svg" alt="CSS3 icon">
+					<img src="../img/skillsImgs/css-3.svg" alt="CSS3 logo">
 					<label>CSS3</label>
 				</div>
 
 				<div class="skill-box box-border">
-					<img src="https://cdn.worldvectorlogo.com/logos/bootstrap-5-1.svg" alt="Bootstrap icon">
+					<img src="../img/skillsImgs/bootstrap-5-1.svg" alt="Bootstrap logo">
 					<label>Bootstrap</label>
 				</div>
 
 				<div class="skill-box box-border">
-					<img src="https://cdn.worldvectorlogo.com/logos/logo-javascript.svg" alt="JavaScript icon">
+					<img src="../img/skillsImgs/logo-javascript.svg" alt="JavaScript logo">
 					<label>JavaScript</label>
 				</div>
 
 				<div class="skill-box box-border">
-					<img src="https://cdn.worldvectorlogo.com/logos/microsoft-sql-server-1.svg"
-						alt="Microsoft Sql Server icon">
+					<img src="../img/skillsImgs/microsoft-sql-server-1.svg" alt="Microsoft Sql Server logo">
 					<label>Microsoft Sql Server</label>
 				</div>
 
 				<div class="skill-box box-border">
-					<img src="https://cdn.worldvectorlogo.com/logos/react-2.svg" alt="ReactJS icon">
+					<img src="../img/skillsImgs/react-2.svg" alt="ReactJS logo">
 					<label>ReactJS</label>
 				</div>
 
 				<div class="skill-box box-border">
-					<img src="https://cdn.worldvectorlogo.com/logos/next-js.svg" alt="Next.JS icon">
+					<img src="../img/skillsImgs/next-js.svg" alt="Next.JS logo">
 					<label>Next.JS</label>
 				</div>
 
 				<div class="skill-box box-border">
-					<img src="https://cdn.worldvectorlogo.com/logos/python-5.svg" alt="Python icon">
+					<img src="../img/skillsImgs/python-5.svg" alt="Python logo">
 					<label>Python</label>
 				</div>
 
 				<div class="skill-box box-border">
-					<img src="https://cdn.worldvectorlogo.com/logos/django.svg" alt="Django icon">
+					<img src="../img/skillsImgs/django.svg" alt="Django logo">
 					<label>Django</label>
 				</div>
 
 				<div class="skill-box box-border">
-					<img src="https://cdn.worldvectorlogo.com/logos/java-4.svg" alt="Java icon">
+					<img src="../img/skillsImgs/java-4.svg" alt="Java logo">
 					<label>Java</label>
 				</div>
 
 				<div class="skill-box box-border">
-					<img src="https://cdn.worldvectorlogo.com/logos/git-icon.svg" alt="Git icon">
+					<img src="../img/skillsImgs/git-icon.svg" alt="Git logo">
 					<label>Git</label>
 				</div>
 
 				<div class="skill-box box-border">
-					<img src="https://cdn.worldvectorlogo.com/logos/c--4.svg" alt="C# icon">
+					<img src="../img/skillsImgs/c--4.svg" alt="C# logo">
 					<label>C#</label>
 				</div>
 
 				<div class="skill-box box-border">
-					<img src="https://cdn.worldvectorlogo.com/logos/flutter-logo.svg" alt="Flutter icon">
+					<img src="../img/skillsImgs/flutter-logo.svg" alt="Flutter logo">
 					<label>Flutter</label>
 				</div>
 
 				<div class="skill-box box-border">
-					<img src="https://cdn.worldvectorlogo.com/logos/dart.svg" alt="Dart icon">
+					<img src="../img/skillsImgs/dart.svg" alt="Dart logo">
 					<label>Dart</label>
 				</div>
 
 				<div class="skill-box box-border">
-					<img src="https://cdn.worldvectorlogo.com/logos/sqlite.svg" alt="SqLite icon">
+					<img src="../img/skillsImgs/sqlite.svg" alt="SqLite logo">
 					<label>SqLite</label>
 				</div>
 
 				<div class="skill-box box-border">
-					<img src="https://cdn.worldvectorlogo.com/logos/postgresql.svg" alt="PostgreSQL icon">
+					<img src="../img/skillsImgs/postgresql.svg" alt="PostgreSQL logo">
 					<label>PostgreSQL</label>
 				</div>
 			</div>
@@ -386,51 +238,45 @@
 
 	<!-- Contact section -->
 	<section class="contact" id="contact">
-		<h2><span>Contato</span></h2>
+		<h2><span></span></h2>
 
 		<div class="bfr-container">
 			<div>
-				<h4>Conect-se comigo</h4>
-				<label>
-					Se você quiser saber mais sobre meu trabalho ou mim
-					<br>
-					envie-me uma mensagem. Eu adoraria ouvir de você.
-				</label>
+				<h4></h4>
+				<label><br></label>
 			</div>
 
 			<div class="contact-container">
 				<form id="contact-form">
 					<div class="input-box">
-						<input type="text" placeholder="Nome completo" id="fullNameInput">
+						<input type="text" placeholder="" id="fullNameInput">
 					</div>
 
 					<div class="input-box">
-						<input type="email" class="itemToDivid" placeholder="E-mail" id="emailInput">
-						<input type="tel" class="itemToDivid" maxlength="15" placeholder="Telefone" id="phoneInput">
+						<input type="email" class="itemToDivid" placeholder="" id="emailInput">
+						<input type="tel" class="itemToDivid" maxlength="15" placeholder="" id="phoneInput">
 					</div>
 
 					<div class="input-box">
-						<textarea cols="30" rows="8" placeholder="Mensagem" id="messageInput"></textarea>
+						<textarea cols="30" rows="8" placeholder="" id="messageInput"></textarea>
 						<input type="hidden" name="_subject" value="New submission from portfolio!" id="defaultMessage">
 					</div>
 
 					<div class="d-flex">
-						<button type="button" class="ml-auto btnSubmitEmail" id="sendEmailBtn">Send Message</button>
+						<button type="button" class="ml-auto btnSubmitEmail" id="sendEmailBtn"></button>
 					</div>
 				</form>
 
 				<div class="contact-div text-end">
-					<h1>Email</h1>
-					<p class="text-truncate uppercase contacts-items-m">crs.pedroh@gmail.com</p>
-
-					<h1>Endereço</h1>
-					<p class="text-truncate uppercase contacts-items-m">
-						Barretos, São Paulo
-						<br>
-						Brasil
+					<h1 class="emailText">Email</h1>
+					<p class="emailText text-truncate uppercase contacts-items-m">
+						crs.pedroh@gmail.com
 					</p>
 
-					<h1>Mídias Social</h1>
+					<h1 class="addressText"></h1>
+					<p class="addressText text-truncate uppercase contacts-items-m"><br></p>
+
+					<h1 class="social-media"></h1>
 					<div class="social-media contacts-items-m">
 						<button type="button" class="iconBtn btnGitHub no-margin"><i class="bx bxl-github"></i></button>
 						<button type="button" class="iconBtn btnLinkedIn no-margin"><i
@@ -444,11 +290,13 @@
 	</section>
 
 	<footer>
-		<p>Made by Pedro H. | 2024</p>
+		<p class="text-bold"></p>
 	</footer>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<script src="https://unpkg.com/@popperjs/core@2"></script>
+	<script src="https://unpkg.com/tippy.js@6"></script>
 	<script src="../js/script.js"></script>
 </body>
 

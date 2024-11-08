@@ -1,0 +1,70 @@
+{
+	"header": {
+		"nav": {
+			"home": "Início",
+			"services": "Serviços",
+			"projects": "Projetos",
+			"skills": "Habilidades",
+			"contact": "Contato"
+		},
+		"languageTippyMsg": "English page"
+	},
+	"home": {
+		"greeting": "Olá, meu nome é",
+		"name": "Pedro Henrique",
+		"bio": "Desenvolvedor de <span>Software</span>",
+		"intro": [
+			"Formado em Análise e Desenvolvimento de Sistemas.",
+			"Em 2022, na reta final da graduação, comecei a atuar como desenvolvedor para a área de Web, ocupando na maior parte do tempo a posição como FrontEnd.",
+			"Tenho grande interesse em desenvolvimento BackEnd para poder atuar como desenvolvedor FullStack, também tenho interesse em desenvolvimento Mobile.",
+			"Busco oportunidade para trabalhar na área e estou disponível para freelance."
+		],
+		"resume_button": "Download Cúrriculo"
+	},
+	"services": {
+		"title": "Serviços",
+		"web": {
+			"title": "Desenvolvimento Web",
+			"description": "O desenvolvimento de aplicativos da Web descreve o processo de projetar, construir, testar e implementar aplicativos baseados na Web que serão instalados em servidores remotos e entregues a usuários ou clientes pela Internet. Depois que um aplicativo da Web for implementado em um servidor de aplicativos, os usuários podem acessar o aplicativo e suas funções e serviços usando qualquer navegador da Web (Google Chrome, Mozilla Firefox, Microsoft Edge, etc.)."
+		},
+		"backend": {
+			"title": "Desenvolvimento BackEnd",
+			"description": "O desenvolvimento de backend se refere ao aspecto do lado do servidor do desenvolvimento da web, com foco na criação e no gerenciamento da lógica do servidor, bancos de dados e APIs. Ele envolve o tratamento da autenticação do usuário, autorização e processamento de solicitações do usuário, normalmente usando linguagens de desenvolvimento de backend, como Python, Java, Ruby, PHP, JavaScript (Node.js) e .NET."
+		},
+		"mobile": {
+			"title": "Desenvolvimento Mobile",
+			"description": "O desenvolvimento de aplicativos móveis é o processo de criação de aplicativos de software que rodam em um dispositivo móvel, e um aplicativo móvel típico utiliza uma conexão de rede para trabalhar com recursos de computação remotos. Portanto, o processo de desenvolvimento móvel envolve a criação de pacotes de software instaláveis, a implementação de serviços de backend, como acesso a dados com uma API, e o teste do aplicativo em dispositivos de destino."
+		}
+	},
+	"projects": {
+		"title": "Projetos",
+		"project1": {
+			"name": "UaiFuel",
+			"extraInfo": "projeto desenvolvido em grupo",
+			"description": "UaiFuel é um gerenciador de abastecimentos para postos de combustível franqueados. Sistema para que as empresas do ramo de transporte possam acompanhar/controlar o histórico abastecimento dos veículos de sua frota. O sistema integra os motoristas, veiculos e postos de combustiveis parceiros da empresa, para evitar fraudes e/ou desperdícios durante os abastecimentos da frota.",
+			"btnRepository": "Repositório no GitHub",
+			"btnDeploy": "Implementação do projeto"
+		}
+	},
+	"skills": {
+		"title": "Habilidades"
+	},
+	"contact": {
+		"title": "Contato",
+		"connect": "Conecte-se comigo",
+		"message": "Se você quiser saber mais sobre meu trabalho ou mim<br>envie-me uma mensagem. Eu adoraria ouvir de você.",
+		"form": {
+			"name_placeholder": "Escreva seu nome",
+			"email_placeholder": "Escreva seu email",
+			"phone_placeholder": "Escreva seu telefone",
+			"message_placeholder": "Escreva uma mensagem",
+			"send_button": "Enviar Mensagem"
+		},
+		"location": "Endereço",
+		"address": "Barretos, São Paulo<br>Brasil",
+		"social": "Mídias Social"
+	},
+	"footer": {
+		"text": "Criado por Pedro H. | 2024"
+	}
+}

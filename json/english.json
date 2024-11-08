@@ -1,0 +1,70 @@
+{
+	"header": {
+		"nav": {
+			"home": "Home",
+			"services": "Services",
+			"projects": "Projects",
+			"skills": "Skills",
+			"contact": "Contact"
+		},
+		"languageTippyMsg": "Página em português"
+	},
+	"home": {
+		"greeting": "Hello, my name is",
+		"name": "Pedro Henrique",
+		"bio": "<span>Software</span> Developer",
+		"intro": [
+			"Graduated in Systems Analysis and Development.",
+			"In 2022, during the final phase of my degree, I began working as a web developer, primarily taking on the role of FrontEnd developer.",
+			"I am very interested in BackEnd development to work as a FullStack developer, and I am also interested in Mobile development.",
+			"I am looking for job opportunities in the field and am available for freelance work."
+		],
+		"resume_button": "Download Resume"
+	},
+	"services": {
+		"title": "Services",
+		"web": {
+			"title": "Web Development",
+			"description": "Web application development describes the process of designing, building, testing and deploying web-based applications that will be installed on remote servers and delivered to users or customers via the internet. Once a web application has been deployed on an application server, users can access the application and its functions and services using any web browser (Google Chrome, Mozilla Firefox, Microsoft Edge, etc.)."
+		},
+		"backend": {
+			"title": "BackEnd Development",
+			"description": "Backend development refers to the server-side aspect of web development, focusing on creating and managing the server logic, databases, and APIs. It involves handling user authentication, authorization, and processing user requests, typically using backend development languages such as Python, Java, Ruby, PHP, JavaScript (Node.js), and .NET."
+		},
+		"mobile": {
+			"title": "Mobile Development",
+			"description": "Mobile application development is the process of creating software applications that run on a mobile device, and a typical mobile application utilizes a network connection to work with remote computing resources. Hence, the mobile development process involves creating installable software bundles (code, binaries, assets, etc.), implementing backend services such as data access with an API, and testing the application on target devices."
+		}
+	},
+	"projects": {
+		"title": "Projects",
+		"project1": {
+			"name": "UaiFuel",
+			"extraInfo": "Project developed in group",
+			"description": "UaiFuel is a supply manager for franchised gas stations. System so that companies in the transport sector can follow/control the supply history of the vehicles in their fleet. The system integrates the company's drivers, vehicles and gas stations partners, to avoid fraud and/or waste during fleet refueling.",
+			"btnRepository": "GitHub Repository",
+			"btnDeploy": "Project Implementation"
+		}
+	},
+	"skills": {
+		"title": "Skills"
+	},
+	"contact": {
+		"title": "Contact",
+		"connect": "Connect with me",
+		"message": "If you want to know more about my work or me,<br>send me a message. I'd love to hear from you.",
+		"form": {
+			"name_placeholder": "Enter your name",
+			"email_placeholder": "Enter your email",
+			"phone_placeholder": "Enter your telephone",
+			"message_placeholder": "Enter you message",
+			"send_button": "Send Message"
+		},
+		"location": "Address",
+		"address": "Barretos, São Paulo<br>Brazil",
+		"social": "Social Media"
+	},
+	"footer": {
+		"text": "Made by Pedro H. | 2024"
+	}
+}
