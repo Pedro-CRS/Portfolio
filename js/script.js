@@ -1,16 +1,22 @@
 $(document).ready(function () {
 	$("#mainContent").addClass("load");
 
-	let initPage = (callback) => {
-		setLanguage(function() {
-			switchThemeFunction(function () {
-				headersEvenets(function () {
-					homeSectionEvents(function () {
-						contactSectionEvents(function () {
-							$("#mainContent").removeClass("load");
+	var theTippy = false;
 
-							if (callback)
-								callback();
+	let initPage = (callback) => {
+		getBrowserLanguage(function (fileName) {
+			changeLanguage(fileName, function (tippyMsg) {
+				languagetippyCreator(tippyMsg, function () {
+					switchThemeFunction(function () {
+						headersEvenets(function () {
+							homeSectionEvents(function () {
+								contactSectionEvents(function () {
+									$("#mainContent").removeClass("load");
+
+									if (callback)
+										callback();
+								});
+							});
 						});
 					});
 				});
@@ -29,12 +35,14 @@ $(document).ready(function () {
 
 		function setTheme(theme) {
 			var setedTheme = "";
+			var unSetedTheme = "";
 
 			if (theme === "light" || theme === null) {
 				body.removeClass("dark");
 				body.addClass("light");
 
 				setedTheme = "light";
+				unSetedTheme = "dark";
 
 				themeSwitcher.find("i").removeClass("bx bx-sun");
 				themeSwitcher.find("i").addClass("bx bx-moon");
@@ -47,6 +55,7 @@ $(document).ready(function () {
 				body.addClass("dark");
 
 				setedTheme = "dark";
+				unSetedTheme = "light";
 
 				themeSwitcher.find("i").removeClass("bx bx-moon");
 				themeSwitcher.find("i").addClass("bx bx-sun");
@@ -56,6 +65,12 @@ $(document).ready(function () {
 			}
 
 			localStorage.setItem("theme", setedTheme);
+
+			if (theTippy) {
+				theTippy.setProps({
+					theme: unSetedTheme
+				});
+			}
 		}
 
 		themeSwitcher.off("click");
@@ -115,12 +130,6 @@ $(document).ready(function () {
 			callback();
 	}
 
-	function skilsSectionEvents(callback) {
-
-		if (callback)
-			callback();
-	}
-
 	function contactSectionEvents(callback) {
 		$("#phoneInput").off("keyup");
 		$("#phoneInput").on("keyup", function (ev) {
@@ -129,7 +138,7 @@ $(document).ready(function () {
 				return;
 			}
 
-			this.value = this.value.replace(/\D/g, '');
+			this.value = this.value.replace(/\D/g, "");
 			this.value = this.value.replace(/(\d{2})(\d)/, "($1) $2");
 			this.value = this.value.replace(/(\d)(\d{4})$/, "$1-$2");
 			return this.value;
@@ -219,28 +228,131 @@ $(document).ready(function () {
 		});
 	}
 
-	function setLanguage(callback) {
+	function getBrowserLanguage(callback) {
+		const language = navigator.language || navigator.languages[0];
+		var fileLang = "";
+
+		if (language === "eng") {
+			fileLang = "english";
+		}
+		else if (language === "pt-br" || (language !== "pt-br" && language !== "eng")) {
+			fileLang = "portuguese";
+		}
+
+		if (callback)
+			callback(fileLang);
+	}
+
+	function changeLanguage(language, callback) {
+		$.getJSON(`../json/${language}.json`, function (jsonTranslations) {
+			updateContentLanguage(jsonTranslations, function () {
+				if (callback)
+					callback(jsonTranslations.header.languageTippyMsg);
+			});
+		});
+	}
+
+	function updateContentLanguage(translations, callback) {
+		// Header
+		$('a[href="#home"]').text(translations.header.nav.home);
+		$('a[href="#services"]').text(translations.header.nav.services);
+		$('a[href="#projects"]').text(translations.header.nav.projects);
+		$('a[href="#skills"]').text(translations.header.nav.skills);
+		$('a[href="#contact"]').text(translations.header.nav.contact);
+
+		// Home Section
+		$(".home-content h3").text(translations.home.greeting);
+		$(".home-content h1").text(translations.home.name);
+		$(".home-content h3.bio").html(translations.home.bio);
+		$(".home-content p").each(function (idx, elm) {
+			elm.textContent = translations.home.intro[idx];
+		});
+		$(".btnResume").text(translations.home.resume_button);
+
+		// Serviços Section
+		$(".services h2 span").text(translations.services.title);
+		$(".services-box.webInfo h3").text(translations.services.web.title);
+		$(".services-box.webInfo p").text(translations.services.web.description);
+
+		$(".services-box.backendInfo h3").text(translations.services.backend.title);
+		$(".services-box.backendInfo p").text(translations.services.backend.description);
+
+		$(".services-box.mobileInfo h3").text(translations.services.mobile.title);
+		$(".services-box.mobileInfo p").text(translations.services.mobile.description);
+
+		// Projetos Section
+		$(".projects h2 span").text(translations.projects.title);
+		$(".project-card.proj1 h3").text(translations.projects.project1.name);
+		$(".project-card.proj1 span").text(translations.projects.project1.extraInfo);
+		$(".project-card.proj1 p").text(translations.projects.project1.description);
+		$(".project-card.proj1 > #btnRep1").prop("title", translations.projects.project1.btnRepository);
+		$(".project-card.proj1 > #btnDep1").prop("title", translations.projects.project1.btnDeploy);
+
+		// Habilidades Section
+		$(".skills h2 span").text(translations.skills.title);
+
+		// Contato Section
+		$(".contact h2 span").text(translations.contact.title);
+		$(".contact h4").text(translations.contact.connect);
+		$(".contact label").html(translations.contact.message);
+		$("#fullNameInput").prop("placeholder", translations.contact.form.name_placeholder);
+		$("#emailInput").prop("placeholder", translations.contact.form.email_placeholder);
+		$("#phoneInput").prop("placeholder", translations.contact.form.phone_placeholder);
+		$("#messageInput").prop("placeholder", translations.contact.form.message_placeholder);
+		$("#sendEmailBtn").text(translations.contact.form.send_button);
+		$(".contact-div h1.addressText").text(translations.contact.location);
+		$(".contact-div p.addressText").html(translations.contact.address);
+		$(".contact-div h1.social-media").text(translations.contact.social);
+
+		// Footer
+		$("footer p").text(translations.footer.text);
+
+		if (callback)
+			callback();
+	}
+
+	function languagetippyCreator(tippyMsg, callback) {
+		const langBtn = $("#language-switcher");
 		const brLang = $("#language-switcher > .br-lang");
 		const usaLang = $("#language-switcher > .usa-lang");
 
-		brLang.off("click");
-		brLang.on("click", function (ev) {
-			const _this = $(this);
+		if (langBtn[0]._tippy)
+			langBtn[0]._tippy.destroy();
 
-			if (!_this.hasClass("hidden")) {
-				_this.addClass("hidden");
-				usaLang.removeClass("hidden");
-			}
+		theTippy = tippy(langBtn[0], {
+			content: tippyMsg,
+			arrow: true,
+			placement: "bottom",
+			theme: "transparent",
+			"show-on-click": false,
+			"show-on-hover": true,
+			"show-on-focus": false,
+			"hide-on-leave": false,
 		});
 
-		usaLang.off("click");
-		usaLang.on("click", function (ev) {
-			const _this = $(this);
+		langBtn.off("click");
+		langBtn.on("click", function (ev) {
+			$("#mainContent").addClass("load");
 
-			if (!_this.hasClass("hidden")) {
-				_this.addClass("hidden");
+			var lang = "";
+
+			if (!brLang.hasClass("hidden")) {
+				lang = "portuguese";
+
+				brLang.addClass("hidden");
+				usaLang.removeClass("hidden");
+			}
+			else if (!usaLang.hasClass("hidden")) {
+				lang = "english";
+
+				usaLang.addClass("hidden");
 				brLang.removeClass("hidden");
 			}
+
+			changeLanguage(lang, function (_tippyMsg) {
+				theTippy.setContent(_tippyMsg);
+				$("#mainContent").removeClass("load");
+			});
 		});
 
 		if (callback)

@@ -69,7 +69,7 @@ header {
 .nav-responsive a {
 	font-size: 1.2rem;
 	color: var(--text-color);
-	padding: 0.5rem 0.7rem;
+	padding: 0.5rem;
 	transition: 0.4s;
 }
 
@@ -118,15 +118,15 @@ header {
 	justify-content: center;
 	align-items: center;
 	background: transparent;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	color: var(--main-color);
 	transition: 0.5s ease;
 	cursor: pointer;
 }
 
 .btn-language {
-	width: 2rem;
-	height: 2rem;
+	width: 1.5rem;
+	height: 1.5rem;
 	background-color: transparent;
 	border-radius: 9999px;
 	margin-left: 0.5rem;
@@ -134,8 +134,8 @@ header {
 }
 
 .language-icon {
-	width: 100%;
-	height: 100%;
+	width: 1.5rem;
+	height: 1.5rem;
 	object-fit: cover;
 	border-radius: 9999px;
 }
@@ -404,7 +404,7 @@ h2 {
 	height: 2.5rem;
 	background-color: transparent;
 	border: solid 0.15rem var(--main-color);
-	border-radius: 50%;
+	border-radius: 25%;
 	font-size: 2rem;
 	color: var(--main-color);
 	margin: 1.3rem 0.5rem;
