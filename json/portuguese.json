@@ -7,7 +7,9 @@
 			"skills": "Habilidades",
 			"contact": "Contato"
 		},
-		"languageTippyMsg": "English page"
+		"languageTippyMsg": "English page",
+		"brFlagAlt": "Bandeira do Brasil",
+		"usaFlagAlt": "Bandeira do E.U.A."
 	},
 	"home": {
 		"greeting": "Olá, meu nome é",
@@ -15,11 +17,12 @@
 		"bio": "Desenvolvedor de <span>Software</span>",
 		"intro": [
 			"Formado em Análise e Desenvolvimento de Sistemas.",
-			"Em 2022, na reta final da graduação, comecei a atuar como desenvolvedor para a área de Web, ocupando na maior parte do tempo a posição como FrontEnd.",
-			"Tenho grande interesse em desenvolvimento BackEnd para poder atuar como desenvolvedor FullStack, também tenho interesse em desenvolvimento Mobile.",
-			"Busco oportunidade para trabalhar na área e estou disponível para freelance."
+			"Em 2022, na reta final da graduação, comecei a atuar como desenvolvedor, ocupando na maior parte do tempo a posição como FrontEnd.",
+			"Tenho grande interesse em desenvolvimento BackEnd para poder atuar também como desenvolvedor FullStack, também tenho interesse em desenvolvimento Mobile.",
+			"Atualmente estou em busca de um novo contrato de trabalho e estou disponível para trabalho freelance."
 		],
-		"resume_button": "Download Cúrriculo"
+		"resumeBtnText": "Acessar Cúrriculo",
+		"profilePicAlt": "Foto de perfil"
 	},
 	"services": {
 		"title": "Serviços",
@@ -44,7 +47,10 @@
 			"description": "UaiFuel é um gerenciador de abastecimentos para postos de combustível franqueados. Sistema para que as empresas do ramo de transporte possam acompanhar/controlar o histórico abastecimento dos veículos de sua frota. O sistema integra os motoristas, veiculos e postos de combustiveis parceiros da empresa, para evitar fraudes e/ou desperdícios durante os abastecimentos da frota.",
 			"btnRepository": "Repositório no GitHub",
 			"btnDeploy": "Implementação do projeto"
-		}
+		},
+		"projectsImgsAlt": "Imagem do projeto",
+		"btnRepText": "Respositório",
+		"btnDepText": "Implementação"
 	},
 	"skills": {
 		"title": "Habilidades"

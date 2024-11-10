@@ -10,11 +10,13 @@ $(document).ready(function () {
 					switchThemeFunction(function () {
 						headersEvenets(function () {
 							homeSectionEvents(function () {
-								contactSectionEvents(function () {
-									$("#mainContent").removeClass("load");
+								projectSectionsEvent(function () {
+									contactSectionEvents(function () {
+										$("#mainContent").removeClass("load");
 
-									if (callback)
-										callback();
+										if (callback)
+											callback();
+									});
 								});
 							});
 						});
@@ -121,9 +123,12 @@ $(document).ready(function () {
 			window.open("https://wa.me/5517982273946", "_blank");
 		});
 
-		$(".btnResume").off("click");
-		$(".btnResume").on("click", function (ev) {
-			window.open("https://docs.google.com/document/d/14GqAn3WyQJ0ef5SSA-7ehPWOWRf0dZ5QWQePiKYDvSc/export?format=pdf");
+		$("#btnResume").off("click");
+		$("#btnResume").on("click", function (ev) {
+			if (!$("#language-switcher > .br-lang").hasClass("hidden"))
+				window.open("https://drive.google.com/file/d/1wOEwJnMeNsR_q359qibV0IexmLoaw9tO/view");
+			else /*if (!$("#language-switcher > .usa-lang").hasClass("hidden"))*/
+				window.open("https://drive.google.com/file/d/1lqfJYJJhuGl-Fv2WC-CHJxNfLt1P3MNx/view");
 		});
 
 		if (callback)
@@ -259,6 +264,8 @@ $(document).ready(function () {
 		$('a[href="#projects"]').text(translations.header.nav.projects);
 		$('a[href="#skills"]').text(translations.header.nav.skills);
 		$('a[href="#contact"]').text(translations.header.nav.contact);
+		$("img.br-lang").prop("alt", translations.header.brFlagAlt);
+		$("img.usa-lang").prop("alt", translations.header.usaFlagAlt);
 
 		// Home Section
 		$(".home-content h3").text(translations.home.greeting);
@@ -267,7 +274,8 @@ $(document).ready(function () {
 		$(".home-content p").each(function (idx, elm) {
 			elm.textContent = translations.home.intro[idx];
 		});
-		$(".btnResume").text(translations.home.resume_button);
+		$("#btnResume").text(translations.home.resumeBtnText);
+		$(".home-img > img").prop("alt", translations.home.profilePicAlt);
 
 		// Serviços Section
 		$(".services h2 span").text(translations.services.title);
@@ -287,6 +295,9 @@ $(document).ready(function () {
 		$(".project-card.proj1 p").text(translations.projects.project1.description);
 		$(".project-card.proj1 > #btnRep1").prop("title", translations.projects.project1.btnRepository);
 		$(".project-card.proj1 > #btnDep1").prop("title", translations.projects.project1.btnDeploy);
+		$(".project-card-image > img").prop("alt", translations.projects.projectsImgsAlt);
+		$(".btnRepository").text(translations.projects.btnRepText);
+		$(".btnDeploy").text(translations.projects.btnDepText);
 
 		// Habilidades Section
 		$(".skills h2 span").text(translations.skills.title);
@@ -353,6 +364,34 @@ $(document).ready(function () {
 				theTippy.setContent(_tippyMsg);
 				$("#mainContent").removeClass("load");
 			});
+		});
+
+		if (callback)
+			callback();
+	}
+
+	function projectSectionsEvent(callback) {
+		$("#phoneInput").off("keyup");
+		$("#phoneInput").on("keyup", function (ev) {
+			if (!this.value) {
+				this.value = "";
+				return;
+			}
+
+			this.value = this.value.replace(/\D/g, "");
+			this.value = this.value.replace(/(\d{2})(\d)/, "($1) $2");
+			this.value = this.value.replace(/(\d)(\d{4})$/, "$1-$2");
+			return this.value;
+		});
+
+		$("#btnUaiFuelDep").off("click");
+		$("#btnUaiFuelDep").on("click", function (ev) {
+			window.open("https://www.youtube.com/watch?v=ooxM2USZKNA", "_blank");
+		});
+
+		$("#btnUaiFuelRep").off("click");
+		$("#btnUaiFuelRep").on("click", function (ev) {
+			window.open("https://github.com/earmarques/UaiFuel", "_blank");
 		});
 
 		if (callback)
