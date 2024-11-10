@@ -263,7 +263,20 @@
 
 					<div class="input-box">
 						<input type="email" class="itemToDivid" placeholder="" id="emailInput">
-						<input type="tel" class="itemToDivid" maxlength="15" placeholder="" id="phoneInput">
+
+						<div class="itemToDivid input-with-prepend">
+							<div class="dropdown-container no-mr">
+								<button type="button" class="dropdown-button">
+									<img src="../img/flag_Brazil.svg" class="flag-icon" id="selected-flag">
+								</button>
+								<div class="dropdown-content">
+									<img src="../img/flag_Brazil.svg" class="dropdown-option" data-country="brazil">
+									<img src="../img/flag_USA.svg" class="dropdown-option" data-country="usa">
+									<img src="" class="dropdown-option" data-country="other">
+								</div>
+							</div>
+							<input type="text" class="no-ml" placeholder="" id="phoneInput">
+						</div>
 					</div>
 
 					<div class="input-box">
@@ -303,6 +316,9 @@
 	</footer>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"
+		integrity="sha512-YgIQ8r5OeryMqeugHoZJQK5u7aujvOZS9X/HOSyioJFQhxpcxpbSD2a5N7ZEp0vtzbMIhzWYALtKXPCqkiyGcQ=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<script src="https://unpkg.com/@popperjs/core@2"></script>
 	<script src="https://unpkg.com/tippy.js@6"></script>

@@ -426,6 +426,79 @@ textarea {
 	margin: 0.5rem 0 1rem;
 }
 
+.input-with-prepend {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	position: relative;
+	border: none !important;
+}
+
+.input-with-prepend .dropdown-container {
+	display: flex;
+	align-items: center;
+	position: relative;
+	border-radius: 0.5rem;
+	padding: 0.25rem 0;
+}
+
+.dropdown-button {
+	width: 2rem;
+	height: 2rem;
+	padding: 0;
+	background: transparent;
+	cursor: pointer;
+	border: none !important;
+}
+
+.dropdown-button img {
+	width: 2rem;
+	height: 2rem;
+	margin: 0 0 0 5px;
+	border-radius: 3px;
+	border: none !important;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background-color: var(--oddSectionBgColor);
+	box-shadow: 0 2px 8px var(--main-color);
+	border-radius: 5px;
+	overflow: hidden;
+	z-index: 1;
+}
+
+.dropdown-content img {
+	width: 2rem;
+	height: 2rem;
+	margin: 4px;
+	cursor: pointer;
+	border: none !important;
+}
+
+.dropdown-container:hover .dropdown-content {
+	max-width: 3rem;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	border: none !important;
+}
+
+.no-mr {
+	border-right: none !important;
+	border-top-right-radius: 0 !important;
+	border-bottom-right-radius: 0 !important;
+}
+
+.no-ml {
+	border-left: none !important;
+	border-top-left-radius: 0 !important;
+	border-bottom-left-radius: 0 !important;
+}
+
 /* / Contact section */
 
 /* General classes */
@@ -678,6 +751,10 @@ footer {
 	.project-card {
 		width: 48%;
 	}
+
+	.itemToDivid {
+		width: 49% !important;
+	}
 }
 
 @media (min-width: 768px) {
@@ -716,11 +793,7 @@ footer {
 	}
 }
 
-@media (min-width: 992px) {
-	.input-box .itemToDivid {
-		width: 49%;
-	}
-}
+@media (min-width: 992px) {}
 
 @media (min-width: 1024px) {
 	.services-container {
