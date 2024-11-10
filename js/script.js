@@ -31,6 +31,7 @@ $(document).ready(function () {
 		const darkThemeLink = $("#dark-theme");
 		const lightThemeLink = $("#light-theme");
 		const body = $("body");
+		var otherCountrySrc = "";
 
 		const savedTheme = localStorage.getItem("theme");
 		setTheme(savedTheme);
@@ -51,6 +52,8 @@ $(document).ready(function () {
 
 				darkThemeLink.prop("disabled", true);
 				lightThemeLink.prop("disabled", false);
+
+				otherCountrySrc = "../img/other_country_dark.svg";
 			}
 			else {
 				body.removeClass("light");
@@ -64,8 +67,11 @@ $(document).ready(function () {
 
 				darkThemeLink.prop("disabled", false);
 				lightThemeLink.prop("disabled", true);
+
+				otherCountrySrc = "../img/other_country_light.svg";
 			}
 
+			$(".dropdown-content > [data-country=other]").prop("src", otherCountrySrc);
 			localStorage.setItem("theme", setedTheme);
 
 			if (theTippy) {
@@ -136,18 +142,33 @@ $(document).ready(function () {
 	}
 
 	function contactSectionEvents(callback) {
-		$("#phoneInput").off("keyup");
-		$("#phoneInput").on("keyup", function (ev) {
-			if (!this.value) {
-				this.value = "";
-				return;
-			}
+		const phoneInput = $("#phoneInput");
 
-			this.value = this.value.replace(/\D/g, "");
-			this.value = this.value.replace(/(\d{2})(\d)/, "($1) $2");
-			this.value = this.value.replace(/(\d)(\d{4})$/, "$1-$2");
-			return this.value;
+		$(".dropdown-option").off("click");
+		$(".dropdown-option").on("click", function () {
+			$("#selected-flag").prop("src", this.src);
+
+			phoneInput.val("");
+
+			phoneInput.inputmask("remove");
+
+			switch (this.dataset.country) {
+				case "brazil":
+					phoneInput.inputmask("+55 (99) 99999-9999");
+					break;
+				case "usa":
+					phoneInput.inputmask("+1 (999) 999-9999");
+					break;
+				default:
+					phoneInput.inputmask("Regex", {
+						regex: "\\+?[0-9\\-\\(\\)\\s]{0,22}$"
+					});
+					break;
+					// max based in kp (North Korea) phone
+			}
 		});
+
+		phoneInput.inputmask("+55 (99) 99999-9999");
 
 		$("#sendEmailBtn").off("click");
 		$("#sendEmailBtn").on("click", function (ev) {
@@ -371,19 +392,6 @@ $(document).ready(function () {
 	}
 
 	function projectSectionsEvent(callback) {
-		$("#phoneInput").off("keyup");
-		$("#phoneInput").on("keyup", function (ev) {
-			if (!this.value) {
-				this.value = "";
-				return;
-			}
-
-			this.value = this.value.replace(/\D/g, "");
-			this.value = this.value.replace(/(\d{2})(\d)/, "($1) $2");
-			this.value = this.value.replace(/(\d)(\d{4})$/, "$1-$2");
-			return this.value;
-		});
-
 		$("#btnUaiFuelDep").off("click");
 		$("#btnUaiFuelDep").on("click", function (ev) {
 			window.open("https://www.youtube.com/watch?v=ooxM2USZKNA", "_blank");
