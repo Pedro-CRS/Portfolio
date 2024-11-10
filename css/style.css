@@ -258,7 +258,7 @@ section:nth-of-type(even) .input-box * {
 	flex-wrap: wrap;
 	flex-direction: row;
 	justify-content: center;
-	gap: 1.5rem;
+	gap: 1rem;
 }
 
 .project-card {
@@ -292,10 +292,58 @@ section:nth-of-type(even) .input-box * {
 	margin: 0 0 1rem 0;
 }
 
-.projectcs-btn-div {
+.projects-btn-div {
+	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: end;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+}
+
+.btn-project {
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+	border: solid 0.15rem var(--main-color);
+	background-color: transparent;
+	border-radius: 0.5rem;
+	cursor: pointer;
+}
+
+.btn-project i {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 2rem;
+	height: 2rem;
+	border-right: 1px solid var(--main-color);
+	font-size: 1.5rem;
+	color: var(--main-color);
+}
+
+.btn-project span {
+	padding: 0 0.4rem;
+}
+
+section:nth-of-type(even) .btn-project:hover {
+	background-color: var(--main-color);
+}
+
+section:nth-of-type(odd) .btn-project:hover {
+	background-color: var(--main-color);
+}
+
+section:nth-of-type(even) .btn-project:hover i,
+section:nth-of-type(even) .btn-project:hover span {
+	color: var(--evenSectionBgColor);
+	border-color: var(--evenSectionBgColor);
+}
+
+section:nth-of-type(odd) .btn-project:hover i,
+section:nth-of-type(odd) .btn-project:hover span {
+	color: var(--oddSectionBgColor);
+	border-color: var(--evenSectionBgColor);
 }
 
 /* / Projects section */
@@ -594,7 +642,8 @@ footer {
 		align-items: center;
 	}
 
-	.services-card {
+	.services-card,
+	.project-card {
 		width: 100%;
 	}
 
@@ -625,12 +674,9 @@ footer {
 		flex-direction: row;
 	}
 
-	.services-card {
-		width: 48%;
-	}
-
+	.services-card,
 	.project-card {
-		width: 47.5%;
+		width: 48%;
 	}
 }
 
@@ -681,12 +727,9 @@ footer {
 		flex-direction: row;
 	}
 
-	.services-card {
-		width: 32%;
-	}
-
+	.services-card,
 	.project-card {
-		width: 31.5%;
+		width: 32%;
 	}
 }
 
@@ -704,9 +747,11 @@ footer {
 	.bfr-container {
 		max-width: 85vw;
 	}
+}
 
+@media (min-width: 1920px) {
 	.project-card {
-		width: 23.5%;
+		width: 24%;
 	}
 }
 

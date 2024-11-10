@@ -5,7 +5,8 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Portfolio | Pedro Henrique</title>
+	<title>Pedro Henrique | Portfolio</title>
+	<link rel="icon" href="../img/myFavIcon.svg" type="image/svg+xml">
 
 	<link rel="stylesheet" href="https://unpkg.com/tippy.js@6/themes/light.css" />
 	<link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
@@ -45,8 +46,8 @@
 		</button>
 
 		<button type="button" id="language-switcher" class="btn-language">
-			<img src="../img/flag_Brazil.svg" alt="Bandeira do Brasil" class="hidden language-icon br-lang">
-			<img src="../img/flag_USA.svg" alt="Bandeira dos E.U.A." class="language-icon usa-lang">
+			<img src="../img/flag_Brazil.svg" class="hidden language-icon br-lang">
+			<img src="../img/flag_USA.svg" class="language-icon usa-lang">
 		</button>
 	</header>
 
@@ -71,12 +72,12 @@
 					</div>
 
 					<div>
-						<a class="aBtn btnResume no-margin"></a>
+						<a id="btnResume" class="aBtn no-margin"></a>
 					</div>
 				</div>
 
 				<div class="home-img">
-					<img src="../img/digitzed-classic-paintings.jpeg" alt="Foto de perfil">
+					<img src="../img/digitzed-classic-paintings.jpeg">
 				</div>
 			</div>
 		</div>
@@ -138,13 +139,15 @@
 						<p>
 						</p>
 
-						<div class="projectcs-btn-div">
-							<button type="button" class="iconBtn no-my" id="btnDep1">
+						<div class="projects-btn-div">
+							<button type="button" class="btn-project" id="btnUaiFuelDep">
 								<i class="bx bx-globe"></i>
+								<span class="btnDeploy">Implementação</span>
 							</button>
 
-							<button type="button" class="iconBtn no-my" id="btnRep1">
+							<button type="button" class="btn-project" id="btnUaiFuelRep">
 								<i class="bx bxl-github"></i>
+								<span class="btnRepository">Repositório no GitHub</span>
 							</button>
 						</div>
 					</div>

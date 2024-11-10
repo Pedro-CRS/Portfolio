@@ -7,7 +7,9 @@
 			"skills": "Skills",
 			"contact": "Contact"
 		},
-		"languageTippyMsg": "Página em português"
+		"languageTippyMsg": "Página em português",
+		"brFlagAlt": "Brazil flag",
+		"usaFlagAlt": "U.S.A flag"
 	},
 	"home": {
 		"greeting": "Hello, my name is",
@@ -15,11 +17,12 @@
 		"bio": "<span>Software</span> Developer",
 		"intro": [
 			"Graduated in Systems Analysis and Development.",
-			"In 2022, during the final phase of my degree, I began working as a web developer, primarily taking on the role of FrontEnd developer.",
+			"In 2022, during the final phase of my degree, I began working as a developer, primarily taking on the role of FrontEnd developer.",
 			"I am very interested in BackEnd development to work as a FullStack developer, and I am also interested in Mobile development.",
-			"I am looking for job opportunities in the field and am available for freelance work."
+			"I am currently looking for a new employment contract and am available for freelance work."
 		],
-		"resume_button": "Download Resume"
+		"resumeBtnText": "Access Resume",
+		"profilePicAlt": "Profile picture"
 	},
 	"services": {
 		"title": "Services",
@@ -44,7 +47,10 @@
 			"description": "UaiFuel is a supply manager for franchised gas stations. System so that companies in the transport sector can follow/control the supply history of the vehicles in their fleet. The system integrates the company's drivers, vehicles and gas stations partners, to avoid fraud and/or waste during fleet refueling.",
 			"btnRepository": "GitHub Repository",
 			"btnDeploy": "Project Implementation"
-		}
+		},
+		"projectsImgsAlt": "Project image",
+		"btnRepText": "Repository",
+		"btnDepText": "Deploy"
 	},
 	"skills": {
 		"title": "Skills"
