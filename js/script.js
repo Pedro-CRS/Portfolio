@@ -8,15 +8,15 @@ $(document).ready(function () {
 	var theTippy = false;
 
 	let initPage = (callback) => {
-		getBrowserLanguage(function (fileName) {
-			changeLanguage(fileName, function (tippyMsg) {
+		getBrowserLanguage(function (fileName, langCode) {
+			changeLanguage(fileName, langCode, function (tippyMsg) {
 				languagetippyCreator(tippyMsg, function () {
 					switchThemeFunction(function () {
 						headersEvenets(function () {
 							homeSectionEvents(function () {
 								projectSectionsEvent(function () {
 									contactSectionEvents(function () {
-										window.scrollTo({ top: 0, behavior: "auto" }); 
+										window.scrollTo({ top: 0, behavior: "auto" });
 										$("#mainContent").removeClass("load hidden");
 
 										if (callback)
@@ -224,6 +224,9 @@ $(document).ready(function () {
 	}
 
 	function formAction(data) {
+		var language = localStorage.getItem("language");
+		var swalText = "";
+
 		$.ajax({
 			url: "https://formsubmit.co/ajax/82d6662d7ed5f73438a8cf3c69643ca7",
 			method: "POST",
@@ -237,44 +240,67 @@ $(document).ready(function () {
 
 				$("#mainContent").removeClass("load");
 
+				if (language === "pt-")
+					swalText = "Eu recebi o seu email, te respondo assim que possivel!";
+				else if (language === "en-")
+					swalText = "I received your email, I'll respond as soon as possible!";
+
 				Swal.fire({
 					position: "center",
 					icon: "success",
-					title: "Sucesso...",
-					text: "Eu recebi o seu email, te respondo assim que possivel!",
+					title: language === "pt-" ? "Sucesso..." : "Success...",
+					text: swalText,
 					showConfirmButton: true,
+					allowOutsideClick: false,
+					allowEscapeKey: false,
 				});
 			},
 			error: function (xhr, status, error) {
 				$("#mainContent").removeClass("load");
 
+				if (language === "pt-")
+					swalText = "Alguma coisa deu errado ao enviar a mensagem, tente novamente!";
+				else if (language === "en-")
+					swalText = "Something went wrong sending the message, try again!";
+
 				Swal.fire({
 					position: "center",
 					icon: "error",
 					title: "Oops...",
-					text: "Alguma coisa deu errado ao enviar a mensagem, tente novamente!",
+					text: swalText,
 					showConfirmButton: true,
+					allowOutsideClick: false,
+					allowEscapeKey: false,
 				});
 			},
 		});
 	}
 
 	function getBrowserLanguage(callback) {
-		const language = navigator.language || navigator.languages[0];
+		const language = localStorage.getItem("language") || navigator.language || navigator.languages[0];
 		var fileLang = "";
+		var langCode = "";
 
-		if (language === "eng") {
+		if (language.startsWith("en-")) {
 			fileLang = "english";
+			langCode = "en-";
 		}
-		else if (language === "pt-br" || (language !== "pt-br" && language !== "eng")) {
+		else if (language.startsWith("pt-")) {
 			fileLang = "portuguese";
+			langCode = "pt-";
+		}
+		else {
+			fileLang = "english";
+			langCode = "en-";
 		}
 
 		if (callback)
-			callback(fileLang);
+			callback(fileLang, langCode);
 	}
 
-	function changeLanguage(language, callback) {
+	function changeLanguage(language, langCode, callback) {
+		localStorage.setItem("language", langCode);
+
 		$.getJSON(`../json/${language}.json`, function (jsonTranslations) {
 			updateContentLanguage(jsonTranslations, function () {
 				if (callback)
@@ -370,23 +396,27 @@ $(document).ready(function () {
 		langBtn.off("click");
 		langBtn.on("click", function (ev) {
 			$("#mainContent").addClass("load");
+			var language = localStorage.getItem("language");
 
-			var lang = "";
+			var languageToSet = "";
+			var langCodeToSet = "";
 
-			if (!brLang.hasClass("hidden")) {
-				lang = "portuguese";
-
-				brLang.addClass("hidden");
-				usaLang.removeClass("hidden");
-			}
-			else if (!usaLang.hasClass("hidden")) {
-				lang = "english";
+			if (language === "pt-") {
+				languageToSet = "english";
+				langCodeToSet = "en-";
 
 				usaLang.addClass("hidden");
 				brLang.removeClass("hidden");
 			}
+			else if (language === "en-") {
+				languageToSet = "portuguese";
+				langCodeToSet = "pt-";
 
-			changeLanguage(lang, function (_tippyMsg) {
+				brLang.addClass("hidden");
+				usaLang.removeClass("hidden");
+			}
+
+			changeLanguage(languageToSet, langCodeToSet, function (_tippyMsg) {
 				theTippy.setContent(_tippyMsg);
 				$("#mainContent").removeClass("load");
 			});
