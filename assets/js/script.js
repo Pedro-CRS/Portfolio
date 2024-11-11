@@ -58,7 +58,7 @@ $(document).ready(function () {
 				darkThemeLink.prop("disabled", true);
 				lightThemeLink.prop("disabled", false);
 
-				otherCountrySrc = "../img/other_country_dark.svg";
+				otherCountrySrc = "assets/img/svgs/other_country_dark.svg";
 			}
 			else {
 				body.removeClass("light");
@@ -73,7 +73,7 @@ $(document).ready(function () {
 				darkThemeLink.prop("disabled", false);
 				lightThemeLink.prop("disabled", true);
 
-				otherCountrySrc = "../img/other_country_light.svg";
+				otherCountrySrc = "assets/img/svgs/other_country_light.svg";
 			}
 
 			$(".dropdown-content > [data-country=other]").prop("src", otherCountrySrc);
@@ -301,7 +301,7 @@ $(document).ready(function () {
 	function changeLanguage(language, langCode, callback) {
 		localStorage.setItem("language", langCode);
 
-		$.getJSON(`../json/${language}.json`, function (jsonTranslations) {
+		$.getJSON(`assets/json/${language}.json`, function (jsonTranslations) {
 			updateContentLanguage(jsonTranslations, function () {
 				if (callback)
 					callback(jsonTranslations.header.languageTippyMsg);
