@@ -1,5 +1,9 @@
 $(document).ready(function () {
 	$("#mainContent").addClass("load");
+	$("header a, header :button").prop("tabindex", "-1");
+	$(".social-media :button").prop("tabindex", "-1");
+	$(".projects-container :button").prop("tabindex", "-1");
+	$("button.dropdown-button").prop("tabindex", "-1");
 
 	var theTippy = false;
 
@@ -12,7 +16,8 @@ $(document).ready(function () {
 							homeSectionEvents(function () {
 								projectSectionsEvent(function () {
 									contactSectionEvents(function () {
-										$("#mainContent").removeClass("load");
+										window.scrollTo({ top: 0, behavior: "auto" }); 
+										$("#mainContent").removeClass("load hidden");
 
 										if (callback)
 											callback();
@@ -225,10 +230,10 @@ $(document).ready(function () {
 			dataType: "json",
 			data: data,
 			success: function (dataR) {
-				name.val("");
-				email.val("");
-				phone.val("");
-				message.val("");
+				$("#fullNameInput").val("");
+				$("#emailInput").val("");
+				$("#phoneInput").val("");
+				$("#messageInput").val("");
 
 				$("#mainContent").removeClass("load");
 

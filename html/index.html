@@ -15,7 +15,7 @@
 	<link id="dark-theme" rel="stylesheet" href="../css/themes/dark.css" disabled>
 </head>
 
-<body id="mainContent">
+<body id="mainContent" class="hidden">
 	<header>
 		<a class="logo">&lt;Pedro H./&gt;</a>
 
@@ -72,7 +72,7 @@
 					</div>
 
 					<div>
-						<a id="btnResume" class="aBtn no-margin"></a>
+						<a id="btnResume" class="aBtn no-margin" tabindex="1"></a>
 					</div>
 				</div>
 
@@ -258,11 +258,11 @@
 			<div class="contact-container">
 				<form id="contact-form">
 					<div class="input-box">
-						<input type="text" placeholder="" id="fullNameInput">
+						<input type="text" placeholder="" id="fullNameInput" tabindex="1">
 					</div>
 
 					<div class="input-box">
-						<input type="email" class="itemToDivid" placeholder="" id="emailInput">
+						<input type="email" class="itemToDivid" placeholder="" id="emailInput" tabindex="2">
 
 						<div class="itemToDivid input-with-prepend">
 							<div class="dropdown-container no-mr">
@@ -275,17 +275,17 @@
 									<img src="" class="dropdown-option" data-country="other">
 								</div>
 							</div>
-							<input type="text" class="no-ml" placeholder="" id="phoneInput">
+							<input type="text" class="no-ml" placeholder="" id="phoneInput" tabindex="3">
 						</div>
 					</div>
 
 					<div class="input-box">
-						<textarea cols="30" rows="8" placeholder="" id="messageInput"></textarea>
+						<textarea cols="30" rows="8" placeholder="" id="messageInput" tabindex="4"></textarea>
 						<input type="hidden" name="_subject" value="New submission from portfolio!" id="defaultMessage">
 					</div>
 
 					<div class="d-flex">
-						<button type="button" class="ml-auto btnSubmitEmail" id="sendEmailBtn"></button>
+						<button type="button" class="ml-auto btnSubmitEmail" id="sendEmailBtn" tabindex="5"></button>
 					</div>
 				</form>
 
