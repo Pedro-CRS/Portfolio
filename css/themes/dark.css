@@ -1,35 +1,10 @@
 :root {
 	--main-color: #5f43b2;
-	--main-color2: #902bf5;
 
 	--text-color: #ffffff;
 
-	--bg-color-01: #121212;
-	--bg-color-02: #1f1f1f;
+	--oddSectionBgColor: #121212;
+	--evenSectionBgColor: #1f1f1f;
 
-	--color-00: #000000;
+	--extremeColor: #000000;
 }
-
-/* .elevation-0 {
-	box-shadow: none !important;
-}
-
-.elevation-1 {
-	box-shadow: 0 1px 2px rgba(255, 255, 255, 0.24) !important;
-}
-
-.elevation-2 {
-	box-shadow: 0 3px 6px rgba(255, 255, 255, 0.23) !important;
-}
-
-.elevation-3 {
-	box-shadow: 0 6px 6px rgba(255, 255, 255, 0.23) !important;
-}
-
-.elevation-4 {
-	box-shadow: 0 10px 10px rgba(255, 255, 255, 0.22) !important;
-}
-
-.elevation-5 {
-	box-shadow: 0 15px 12px rgba(255, 255, 255, 0.22) !important;
-} */

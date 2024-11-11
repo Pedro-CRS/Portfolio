@@ -17,7 +17,7 @@ html {
 }
 
 body {
-	background-color: var(--bg-color-01);
+	background-color: var(--extremeColor);
 	color: var(--text-color);
 }
 
@@ -37,7 +37,7 @@ header {
 	width: 100%;
 	height: 4.375rem;
 	padding: 1.1rem;
-	background-color: var(--color-00);
+	background-color: var(--extremeColor);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -58,7 +58,7 @@ header {
 	left: 0;
 	width: 100%;
 	padding: 1rem;
-	background-color: var(--bg-color-01);
+	background-color: var(--extremeColor);
 }
 
 .nav {
@@ -145,27 +145,24 @@ header {
 /* Sections */
 section {
 	padding: 6rem 0;
-	/* height: calc(100vw - 4.375rem); */
 }
 
 section:nth-of-type(odd) {
-	background-color: var(--bg-color-01);
-	--oddSectionBgColor: var(--bg-color-01);
+	background-color: var(--oddSectionBgColor);
 }
 
 section:nth-of-type(even) {
-	background-color: var(--bg-color-02);
-	--evenSectionBgColor: var(--bg-color-02);
+	background-color: var(--evenSectionBgColor);
 }
 
 section:nth-of-type(odd) .box-border,
 section:nth-of-type(odd) .input-box * {
-	border: solid 0.25rem var(--bg-color-02);
+	border: solid 0.25rem var(--evenSectionBgColor);
 }
 
 section:nth-of-type(even) .box-border,
 section:nth-of-type(even) .input-box * {
-	border: solid 0.25rem var(--bg-color-01);
+	border: solid 0.25rem var(--oddSectionBgColor);
 }
 
 /* / Sections */
@@ -535,13 +532,11 @@ h2 {
 section:nth-of-type(even) .iconBtn:hover {
 	background-color: var(--main-color);
 	color: var(--evenSectionBgColor);
-	/* box-shadow: 0 0 2rem var(--main-color); */
 }
 
 section:nth-of-type(odd) .iconBtn:hover {
 	background-color: var(--main-color);
 	color: var(--oddSectionBgColor);
-	/* box-shadow: 0 0 2rem var(--main-color); */
 }
 
 .aBtn,
@@ -551,7 +546,7 @@ section:nth-of-type(odd) .iconBtn:hover {
 	background-color: var(--main-color);
 	border: solid 0.15rem var(--main-color);
 	border-radius: 2rem;
-	color: var(--bg-color-02);
+	color: var(--text-color);
 	font-weight: 600;
 	letter-spacing: 0.1rem;
 	transition: 0.3s ease;
@@ -616,7 +611,7 @@ footer {
 	justify-content: center;
 	align-items: center;
 	padding: 1.2rem;
-	background-color: var(--color-00);
+	background-color: var(--extremeColor);
 }
 
 .load {
