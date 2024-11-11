@@ -116,17 +116,17 @@ $(document).ready(function () {
 	function homeSectionEvents(callback) {
 		$(".btnGitHub").off("click");
 		$(".btnGitHub").on("click", function (ev) {
-			window.open("https://github.com/Pedro-CRS", "_blank");
+			window.open("https://github.com/Pedro-CRS", "_blank", "noopener, noreferrer");
 		});
 
 		$(".btnLinkedIn").off("click");
 		$(".btnLinkedIn").on("click", function (ev) {
-			window.open("https://www.linkedin.com/in/pedro-henrique-24607a154/", "_blank");
+			window.open("https://www.linkedin.com/in/pedro-henrique-24607a154/", "_blank", "noopener, noreferrer");
 		});
 
 		$(".btnWhatsApp").off("click");
 		$(".btnWhatsApp").on("click", function (ev) {
-			window.open("https://wa.me/5517982273946", "_blank");
+			window.open("https://wa.me/5517982273946", "_blank", "noopener, noreferrer");
 		});
 
 		$("#btnResume").off("click");
@@ -162,9 +162,9 @@ $(document).ready(function () {
 				default:
 					phoneInput.inputmask("Regex", {
 						regex: "\\+?[0-9\\-\\(\\)\\s]{0,22}$"
+						// max based in kp (North Korea) phone
 					});
 					break;
-					// max based in kp (North Korea) phone
 			}
 		});
 
@@ -280,11 +280,11 @@ $(document).ready(function () {
 
 	function updateContentLanguage(translations, callback) {
 		// Header
-		$('a[href="#home"]').text(translations.header.nav.home);
-		$('a[href="#services"]').text(translations.header.nav.services);
-		$('a[href="#projects"]').text(translations.header.nav.projects);
-		$('a[href="#skills"]').text(translations.header.nav.skills);
-		$('a[href="#contact"]').text(translations.header.nav.contact);
+		$(`a[href="#home"]`).text(translations.header.nav.home);
+		$(`a[href="#services"]`).text(translations.header.nav.services);
+		$(`a[href="#projects"]`).text(translations.header.nav.projects);
+		$(`a[href="#skills"]`).text(translations.header.nav.skills);
+		$(`a[href="#contact"]`).text(translations.header.nav.contact);
 		$("img.br-lang").prop("alt", translations.header.brFlagAlt);
 		$("img.usa-lang").prop("alt", translations.header.usaFlagAlt);
 
@@ -394,16 +394,33 @@ $(document).ready(function () {
 	function projectSectionsEvent(callback) {
 		$("#btnUaiFuelDep").off("click");
 		$("#btnUaiFuelDep").on("click", function (ev) {
-			window.open("https://www.youtube.com/watch?v=ooxM2USZKNA", "_blank");
+			window.open("https://www.youtube.com/watch?v=ooxM2USZKNA", "_blank", "noopener, noreferrer");
 		});
 
 		$("#btnUaiFuelRep").off("click");
 		$("#btnUaiFuelRep").on("click", function (ev) {
-			window.open("https://github.com/earmarques/UaiFuel", "_blank");
+			window.open("https://github.com/earmarques/UaiFuel", "_blank", "noopener, noreferrer");
 		});
 
 		if (callback)
 			callback();
+	}
+
+	function scrollToSection(ev) {
+		ev.preventDefault();
+
+		const href = $(ev.target).attr("href");
+
+		const target = $(href);
+		const position = Math.ceil(target.offset().top - 70);
+
+		originalOnScroll = window.onscroll;
+		window.onscroll = null;
+
+		window.scrollTo({
+			top: position,
+			behavior: "smooth"
+		});
 	}
 
 	initPage();
