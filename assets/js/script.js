@@ -98,7 +98,8 @@ $(document).ready(function () {
 
 	let headersEvenets = (callback) => {
 		const menuHamburguer = $(".menu-hamburguer");
-		menuHamburguer[0].addEventListener("click", function () {
+		menuHamburguer.off("click");
+		menuHamburguer.on("click", function (ev) {
 			const nav = $(".nav-responsive")[0];
 
 			menuHamburguer.toggleClass("change");
@@ -109,9 +110,15 @@ $(document).ready(function () {
 				nav.style.display = "none";
 		});
 
-		$(".nav > a, .nav-responsive > a").off("click");
-		$(".nav > a, .nav-responsive > a").on("click", function (ev) {
+		$(".nav > a").off("click");
+		$(".nav > a").on("click", function (ev) {
 			scrollToSection(ev);
+		});
+
+		$(".nav-responsive > a").off("click");
+		$(".nav-responsive > a").on("click", function (ev) {
+			scrollToSection(ev);
+			menuHamburguer.trigger("click");
 		});
 
 		if (callback)
