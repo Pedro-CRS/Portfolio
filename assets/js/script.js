@@ -108,6 +108,9 @@ $(document).ready(function () {
 				nav.style.display = "block";
 			else
 				nav.style.display = "none";
+
+			menuHamburguer.find("i.bx-menu").toggleClass("hidden");
+			menuHamburguer.find("i.bx-x").toggleClass("hidden");
 		});
 
 		$(".nav > a").off("click");
@@ -389,6 +392,11 @@ $(document).ready(function () {
 		const langBtn = $("#language-switcher");
 		const brLang = $("#language-switcher > .br-lang");
 		const usaLang = $("#language-switcher > .usa-lang");
+
+		if (localStorage.getItem("language") === "pt-")
+			usaLang.removeClass("hidden");
+		else if (localStorage.getItem("language") === "en-")
+			brLang.removeClass("hidden");
 
 		if (langBtn[0]._tippy)
 			langBtn[0]._tippy.destroy();
