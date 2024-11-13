@@ -143,10 +143,14 @@ $(document).ready(function () {
 
 		$("#btnResume").off("click");
 		$("#btnResume").on("click", function (ev) {
-			if (!$("#language-switcher > .br-lang").hasClass("hidden"))
-				window.open("https://drive.google.com/file/d/1wOEwJnMeNsR_q359qibV0IexmLoaw9tO/view");
-			else /*if (!$("#language-switcher > .usa-lang").hasClass("hidden"))*/
-				window.open("https://drive.google.com/file/d/1lqfJYJJhuGl-Fv2WC-CHJxNfLt1P3MNx/view");
+			var language = localStorage.getItem("language");
+
+			if (language === "pt-")
+				window.open("https://drive.google.com/file/d/1lqfJYJJhuGl-Fv2WC-CHJxNfLt1P3MNx/view", "_blank", "noopener, noreferrer");
+			else if (language === "en-")
+				window.open("https://drive.google.com/file/d/1wOEwJnMeNsR_q359qibV0IexmLoaw9tO/view", "_blank", "noopener, noreferrer");
+			else
+				window.open("https://drive.google.com/file/d/1wOEwJnMeNsR_q359qibV0IexmLoaw9tO/view", "_blank", "noopener, noreferrer");
 		});
 
 		if (callback)

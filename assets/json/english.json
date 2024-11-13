@@ -44,7 +44,7 @@
 		"project1": {
 			"name": "UaiFuel",
 			"extraInfo": "Project developed in group",
-			"description": "UaiFuel is a supply manager for franchised gas stations. System so that companies in the transport sector can follow/control the supply history of the vehicles in their fleet. The system integrates the company's drivers, vehicles and gas stations partners, to avoid fraud and/or waste during fleet refueling.",
+			"description": "UaiFuel is a supply manager for franchised gas stations. The system is destined so that companies in the transport sector can follow/control the supply history of the vehicles in their fleet. The system integrates the company's drivers, vehicles and gas stations partners, to avoid fraud and/or waste during fleet refueling.",
 			"btnRepository": "GitHub Repository",
 			"btnDeploy": "Project Implementation"
 		},
