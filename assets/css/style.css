@@ -86,14 +86,14 @@ header {
 }
 
 .menu-hamburguer {
-    display: none;
-    align-items: center;
-    justify-content: center;
+	display: none;
+	align-items: center;
+	justify-content: center;
 	color: var(--text-color);
-    background: transparent;
-    font-size: 2rem;
-    cursor: pointer;
-    margin: 0 0.7rem 0 0;
+	background: transparent;
+	font-size: 2rem;
+	cursor: pointer;
+	margin: 0 0.7rem 0 0;
 }
 
 .btn-theme {
@@ -450,7 +450,7 @@ textarea {
 	box-shadow: 0 2px 8px var(--main-color);
 	border-radius: 5px;
 	overflow: hidden;
-	z-index: 1;
+	z-index: 3;
 }
 
 .dropdown-content img {
@@ -656,6 +656,10 @@ footer {
 
 .elevation-5 {
 	box-shadow: 0 15px 12px var(--main-color) !important;
+}
+
+.swal2-container {
+	z-index: 99999;
 }
 
 /* / General classes */
