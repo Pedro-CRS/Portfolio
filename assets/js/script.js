@@ -313,13 +313,34 @@ $(document).ready(function () {
 	}
 
 	function changeLanguage(language, langCode, callback) {
-		localStorage.setItem("language", langCode);
+		fetch(`assets/json/${language}.json`).then(response => {
+			if (!response.ok) {
+				const errorMessage = `PT-BR: Erro ao carregar o arquivo de tradução.\nENG: Error loading translation file.`;
 
-		$.getJSON(`assets/json/${language}.json`, function (jsonTranslations) {
+				throw new Error(errorMessage);
+			}
+
+			return response.json();
+
+		}).then(jsonTranslations => {
 			updateContentLanguage(jsonTranslations, function () {
+				localStorage.setItem("language", langCode);
+
 				if (callback)
 					callback(jsonTranslations.header.languageTippyMsg);
 			});
+		}).catch(error => {
+			Swal.fire({
+				position: "center",
+				icon: "error",
+				title: "Oops...",
+				text: error.message,
+				showConfirmButton: true,
+				allowOutsideClick: false,
+				allowEscapeKey: false,
+			});
+			
+			$("#mainContent").removeClass("hidden");
 		});
 	}
 
