@@ -136,7 +136,7 @@ $(document).ready(function () {
 
 		$(".btnLinkedIn").off("click");
 		$(".btnLinkedIn").on("click", function (ev) {
-			window.open("https://www.linkedin.com/in/pedro-henrique-24607a154/", "_blank", "noopener, noreferrer");
+			window.open("https://www.linkedin.com/in/pedro-henrique-alves-24607a154/", "_blank", "noopener, noreferrer");
 		});
 
 		$(".btnWhatsApp").off("click");
@@ -252,8 +252,6 @@ $(document).ready(function () {
 				$("#phoneInput").val("");
 				$("#messageInput").val("");
 
-				$("#mainContent").removeClass("load");
-
 				if (language === "pt-")
 					swalText = "Eu recebi o seu email, te respondo assim que possivel!";
 				else if (language === "en-")
@@ -267,6 +265,9 @@ $(document).ready(function () {
 					showConfirmButton: true,
 					allowOutsideClick: false,
 					allowEscapeKey: false,
+				}).then((result) => {
+					if (result.isConfirmed)
+						$("#mainContent").removeClass("load");
 				});
 			},
 			error: function (xhr, status, error) {
@@ -285,6 +286,9 @@ $(document).ready(function () {
 					showConfirmButton: true,
 					allowOutsideClick: false,
 					allowEscapeKey: false,
+				}).then((result) => {
+					if (result.isConfirmed)
+						$("#mainContent").removeClass("load");
 				});
 			},
 		});
@@ -338,9 +342,10 @@ $(document).ready(function () {
 				showConfirmButton: true,
 				allowOutsideClick: false,
 				allowEscapeKey: false,
+			}).then((result) => {
+				if (result.isConfirmed)
+					$("#mainContent").removeClass("load");
 			});
-			
-			$("#mainContent").removeClass("hidden");
 		});
 	}
 
