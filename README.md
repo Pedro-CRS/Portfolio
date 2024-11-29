@@ -58,6 +58,7 @@ Portfolio/
 │       ├── english.json   # Traduções para inglês / English translation
 │       └── portuguese.json # Traduções para português / Portuguese translation
 └── README.md              # Documentação do projeto / Project documentation
+```
 
 ## 🚀 Tecnologias Utilizadas / 🚀 Technologies Used
 
