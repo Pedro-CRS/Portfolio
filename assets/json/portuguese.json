@@ -31,7 +31,7 @@
 			"description": "O desenvolvimento de aplicativos da Web descreve o processo de projetar, construir, testar e implementar aplicativos baseados na Web que serão instalados em servidores remotos e entregues a usuários ou clientes pela Internet. Depois que um aplicativo da Web for implementado em um servidor de aplicativos, os usuários podem acessar o aplicativo e suas funções e serviços usando qualquer navegador da Web (Google Chrome, Mozilla Firefox, Microsoft Edge, etc.)."
 		},
 		"backend": {
-			"title": "Desenvolvimento BackEnd",
+			"title": "Desenvolvimento Backend",
 			"description": "O desenvolvimento de backend se refere ao aspecto do lado do servidor do desenvolvimento da web, com foco na criação e no gerenciamento da lógica do servidor, bancos de dados e APIs. Ele envolve o tratamento da autenticação do usuário, autorização e processamento de solicitações do usuário, normalmente usando linguagens de desenvolvimento de backend, como Python, Java, Ruby, PHP, JavaScript (Node.js) e .NET."
 		},
 		"mobile": {
@@ -45,6 +45,13 @@
 			"name": "UaiFuel",
 			"extraInfo": "projeto desenvolvido em grupo",
 			"description": "UaiFuel é um gerenciador de abastecimentos para postos de combustível franqueados. Sistema para que as empresas do ramo de transporte possam acompanhar/controlar o histórico abastecimento dos veículos de sua frota. O sistema integra os motoristas, veiculos e postos de combustiveis parceiros da empresa, para evitar fraudes e/ou desperdícios durante os abastecimentos da frota.",
+			"btnRepository": "Repositório no GitHub",
+			"btnDeploy": "Implementação do projeto"
+		},
+		"project2": {
+			"name": "CheckIt - To Do list",
+			"extraInfo": "Projeto Full stack",
+			"description": "Aplicação para gerenciar suas tarefas de maneira eficiente e organizada. A plataforma permite que os usuários registrem, editem, completem e excluam tarefas, além de criar categorias para melhor organização.",
 			"btnRepository": "Repositório no GitHub",
 			"btnDeploy": "Implementação do projeto"
 		},
