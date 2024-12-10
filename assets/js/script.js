@@ -319,7 +319,11 @@ $(document).ready(function () {
 	function changeLanguage(language, langCode, callback) {
 		fetch(`assets/json/${language}.json`).then(response => {
 			if (!response.ok) {
-				const errorMessage = `PT-BR: Erro ao carregar o arquivo de tradução.\nENG: Error loading translation file.`;
+				const errorMessage = `<p>PT-BR: Erro ao carregar o arquivo de tradução.</p>
+					<p>Por favor, recarregue a página, se o problema persistir entre em contato através do email: crs.pedroh@gmail.com</p>
+					<br>
+					<p>ENG: Error loading translation file.</p>
+					<p>Please reload the page, if the problem persists please contact me by email: crs.pedroh@gmail.com</p>`;
 
 				throw new Error(errorMessage);
 			}
@@ -338,14 +342,14 @@ $(document).ready(function () {
 				position: "center",
 				icon: "error",
 				title: "Oops...",
-				text: error.message,
+				html: error.message,
 				showConfirmButton: true,
 				allowOutsideClick: false,
 				allowEscapeKey: false,
-			}).then((result) => {
-				if (result.isConfirmed)
-					$("#mainContent").removeClass("load");
-			});
+			}).then((result) => { });
+
+			if (callback)
+				callback();
 		});
 	}
 
