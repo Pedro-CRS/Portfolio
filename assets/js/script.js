@@ -385,8 +385,11 @@ $(document).ready(function () {
 		$(".project-card.proj1 h3").text(translations.projects.project1.name);
 		$(".project-card.proj1 span").text(translations.projects.project1.extraInfo);
 		$(".project-card.proj1 p").text(translations.projects.project1.description);
-		$(".project-card.proj1 > #btnRep1").prop("title", translations.projects.project1.btnRepository);
-		$(".project-card.proj1 > #btnDep1").prop("title", translations.projects.project1.btnDeploy);
+
+		$(".project-card.proj2 h3").text(translations.projects.project2.name);
+		$(".project-card.proj2 span").text(translations.projects.project2.extraInfo);
+		$(".project-card.proj2 p").text(translations.projects.project2.description);
+
 		$(".project-card-image > img").prop("alt", translations.projects.projectsImgsAlt);
 		$(".btnRepository").text(translations.projects.btnRepText);
 		$(".btnDeploy").text(translations.projects.btnDepText);
@@ -480,6 +483,16 @@ $(document).ready(function () {
 		$("#btnUaiFuelRep").off("click");
 		$("#btnUaiFuelRep").on("click", function (ev) {
 			window.open("https://github.com/earmarques/UaiFuel", "_blank", "noopener, noreferrer");
+		});
+
+		$("#btnToDoListWebDep").off("click");
+		$("#btnToDoListWebDep").on("click", function (ev) {
+			window.open("https://pedro-crs.github.io/ToDoListWeb", "_blank", "noopener, noreferrer");
+		});
+
+		$("#btnToDoListWebRep").off("click");
+		$("#btnToDoListWebRep").on("click", function (ev) {
+			window.open("https://github.com/Pedro-CRS/ToDoListWeb", "_blank", "noopener, noreferrer");
 		});
 
 		if (callback)

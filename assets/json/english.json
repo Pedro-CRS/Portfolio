@@ -31,7 +31,7 @@
 			"description": "Web application development describes the process of designing, building, testing and deploying web-based applications that will be installed on remote servers and delivered to users or customers via the internet. Once a web application has been deployed on an application server, users can access the application and its functions and services using any web browser (Google Chrome, Mozilla Firefox, Microsoft Edge, etc.)."
 		},
 		"backend": {
-			"title": "BackEnd Development",
+			"title": "Backend Development",
 			"description": "Backend development refers to the server-side aspect of web development, focusing on creating and managing the server logic, databases, and APIs. It involves handling user authentication, authorization, and processing user requests, typically using backend development languages such as Python, Java, Ruby, PHP, JavaScript (Node.js), and .NET."
 		},
 		"mobile": {
@@ -45,6 +45,13 @@
 			"name": "UaiFuel",
 			"extraInfo": "Project developed in group",
 			"description": "UaiFuel is a supply manager for franchised gas stations. The system is destined so that companies in the transport sector can follow/control the supply history of the vehicles in their fleet. The system integrates the company's drivers, vehicles and gas stations partners, to avoid fraud and/or waste during fleet refueling.",
+			"btnRepository": "GitHub Repository",
+			"btnDeploy": "Project Implementation"
+		},
+		"project2": {
+			"name": "CheckIt - To Do list",
+			"extraInfo": "Full stack project",
+			"description": "Application for managing your tasks in an efficient and organized way. The platform allows users to register, edit, complete and delete tasks, as well as create categories for better organization.",
 			"btnRepository": "GitHub Repository",
 			"btnDeploy": "Project Implementation"
 		},

@@ -242,6 +242,8 @@ section:nth-of-type(even) .input-box * {
 }
 
 .project-card {
+	display: flex;
+	flex-direction: column;
 	text-align: justify;
 	border-radius: 15px;
 	overflow: hidden;
@@ -251,6 +253,7 @@ section:nth-of-type(even) .input-box * {
 
 .project-card-image img {
 	width: 100%;
+	min-height: 200px;
 	max-height: 200px;
 	display: block;
 	object-fit: cover;
@@ -269,7 +272,13 @@ section:nth-of-type(even) .input-box * {
 
 .project-card-content p {
 	font-size: 0.9rem;
-	margin: 0 0 1rem 0;
+	margin: 0.5rem 0;
+}
+
+.project-card-bottom {
+	padding: 1rem;
+	margin-top: auto;
+	background-color: transparent;
 }
 
 .projects-btn-div {
@@ -662,6 +671,14 @@ footer {
 	z-index: 99999;
 }
 
+.no-select {
+	user-select: none !important;
+}
+
+.small-text {
+	font-size: small;
+}
+
 /* / General classes */
 
 /* Media queries */
@@ -708,10 +725,6 @@ footer {
 		width: 100%;
 	}
 
-	.projects-container {
-		flex-direction: column;
-	}
-
 	.contact-container {
 		flex-direction: column;
 	}
@@ -726,13 +739,9 @@ footer {
 @media (min-width: 360px) {}
 
 @media (min-width: 576px) {
-	.services-container {
+	.services-container, .projects-container {
 		flex-direction: row;
 		align-items: stretch;
-	}
-
-	.projects-container {
-		flex-direction: row;
 	}
 
 	.services-card,
