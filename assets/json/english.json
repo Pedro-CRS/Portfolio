@@ -16,9 +16,10 @@
 		"name": "Pedro Henrique",
 		"bio": "<span>Software</span> Developer",
 		"intro": [
-			"Graduated in Systems Analysis and Development.",
-			"In 2022, during the final phase of my degree, I began working as a developer, primarily taking on the role of FrontEnd developer.",
-			"I am very interested in BackEnd development to work as a FullStack developer, and I am also interested in Mobile development.",
+			"Full Stack Software Developer focused on back-end development, with over 3 years of experience developing web, mobile, and enterprise systems.",
+			"Specialized in building APIs, ensuring high performance and security. I've worked on the development of over 25 enterprise modules, including systems for the finance, CRM, project management, and product management sectors, with a focus on clean architecture and operational efficiency.",
+			"My international experience working remotely in Canada (communicating in English and French) reinforces my ability to collaborate in multicultural teams.",
+			"In 2022, during the final phase of my degree, I began my professional carrer as a Full Stack developer, working end-to-end, participating in front-end, back-end, and mobile application development, integrating systems with databases.",
 			"I am currently looking for a new employment contract and am available for freelance work."
 		],
 		"resumeBtnText": "Access Resume",
