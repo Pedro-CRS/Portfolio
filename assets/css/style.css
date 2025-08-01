@@ -679,6 +679,11 @@ footer {
 	font-size: small;
 }
 
+.openToWork-text {
+	text-decoration: underline;
+	font-weight: 700;
+}
+
 /* / General classes */
 
 /* Media queries */
