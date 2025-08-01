@@ -136,7 +136,7 @@ $(document).ready(function () {
 
 		$(".btnLinkedIn").off("click");
 		$(".btnLinkedIn").on("click", function (ev) {
-			window.open("https://www.linkedin.com/in/pedro-henrique-alves-24607a154/", "_blank", "noopener, noreferrer");
+			window.open("https://www.linkedin.com/in/pedrohenriquecrsalves/", "_blank", "noopener, noreferrer");
 		});
 
 		$(".btnWhatsApp").off("click");
@@ -149,11 +149,9 @@ $(document).ready(function () {
 			var language = localStorage.getItem("language");
 
 			if (language === "pt-")
-				window.open("https://drive.google.com/file/d/1lqfJYJJhuGl-Fv2WC-CHJxNfLt1P3MNx/view", "_blank", "noopener, noreferrer");
-			else if (language === "en-")
-				window.open("https://drive.google.com/file/d/1wOEwJnMeNsR_q359qibV0IexmLoaw9tO/view", "_blank", "noopener, noreferrer");
+				window.open("https://drive.google.com/file/d/1vjiAKcvjhhCn5f1i_EoViCOiGiqp-4W-/view", "_blank", "noopener, noreferrer");
 			else
-				window.open("https://drive.google.com/file/d/1wOEwJnMeNsR_q359qibV0IexmLoaw9tO/view", "_blank", "noopener, noreferrer");
+				window.open("https://drive.google.com/file/d/18yE48MlrIpfNl_6BMpV7MSoi3lIsLbzr/view", "_blank", "noopener, noreferrer");
 		});
 
 		if (callback)
